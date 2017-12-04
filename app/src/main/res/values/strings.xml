@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">TDTU Student</string>
+    <string name="app_name_calendar">TDTU Schedule</string>
+    <!-- Dang nhap -->
+    <string name="mess_error_user">Please enter username!</string>
+    <string name="mess_error_password">Please enter password!</string>
+    <string name="mess_error_login">Sign in failed!\nPlease check your infomation or the Internet connection.</string>
+
+    <string name="dangnhap_title">Login</string>
+    <string name="dangnhap_edt_user">Username</string>
+    <string name="dangnhap_edt_pass">Password</string>
+
+    <string name="just_now">Just now</string>
+
+    <!--Thông báo-->
+    <string name="mess_thongbao_error_network">Cannot load announcements\nPlease check connection and try again</string>
+    <string name="mess_thongbao_error_pagetotal">We didn't find anything to show here</string>
+    <string name="mess_thongbao_webview_error_network">Cannot load announcements\nPlease check connection and try again</string>
+    <string name="mess_thongbao_webview_cache">Announcements may be outdated\nPull down to update</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!--Học phí-->
+    <string name="mess_hocphi_khongco">We didn't find anything to show here</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--TKB-->
+    <string name="mess_tkb_hocky_macdinh_set">Default semester set</string>
+    <string name="mess_tkb_ngay_error_macdinh">Please set default semester to show in schedule</string>
+
+    <!--Trang chu-->
+    <string name="mess_logout_tile">Logout</string>
+    <string name="mess_logout_info">ALL of your data will be delete.\nAre you sure to logout?</string>
+    <string name="bottom_sheet_title_hocky">Semester list</string>
+
+    <string name="dialog_title_text_color">Select a Text Color</string>
+    <string name="dialog_title_text_back_color">Select a Text Background Color</string>
+
+    <!-- Insert Table -->
+    <string name="title_insert_table">Insert Table</string>
+    <string name="hint_no_of_columns">Number of columns</string>
+    <string name="hint_no_of_rows">Number of rows</string>
+
+    <!-- Insert Link -->
+    <string name="title_insert_link">Insert Link</string>
+    <string name="hint_text_to_display">Text to display</string>
+    <string name="hint_link_to">Link to</string>
+    <string name="insert">Insert</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="m_news">ANNOUNCEMENTS</string>
+    <string name="m_news_summary">Receive announcements from TDTU</string>
+    <string name="m_email">EMAIL</string>
+    <string name="m_email_summary">Student email</string>
+    <string name="m_schedule">SCHEDULE</string>
+    <string name="m_schedule_summary">Thông tin lịch học các học kỳ</string>
+    <string name="m_examschedule">EXAM SCHEDULE</string>
+    <string name="m_examschedule_summary">Thông tin lịch thi các học kỳ</string>
+    <string name="m_grades">GRADES</string>
+    <string name="m_grades_summary">Tổng hợp kết quả học tập</string>
+    <string name="m_eaa">EXTRA CURRICULAR</string>
+    <string name="m_eaa_summary">Điểm dánh giá các hoạt động phong trào</string>
+    <string name="m_tuitionfee">TUITION FEES</string>
+    <string name="m_tuitionfee_summary">Thông tin học phí học kỳ</string>
+    <string name="m_sakai">SAKAI</string>
+    <string name="m_sakai_summary">sakai</string>
+    <string name="m_cs">VERIFICATION</string>
+    <string name="m_onlines">ONLINE APPLICATION</string>
+    <string name="m_bugreport">BUG REPORT</string>
+    <string name="m_bugreport_summary">báo lỗi</string>
+    <string name="new_version">" New version:"</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="logout">Logout</string>
+    <string name="update">Update</string>
+    <string name="hello">Hi </string>
+    <string name="m_sinfo">STUDENT'S INFO</string>
+</resources>

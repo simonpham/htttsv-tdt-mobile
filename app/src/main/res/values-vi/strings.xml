@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TDT Sinh viên</string>
+    <string name="app_name_calendar">TDT Lịch học</string>
+    <!-- Dang nhap -->
+    <string name="mess_error_user">Không được để trống</string>
+    <string name="mess_error_password">Không được để trống</string>
+    <string name="mess_error_login">Đăng nhập thất bại\nVui lòng kiểm tra lại tài khoản và mật khẩu.</string>
+
+    <string name="dangnhap_title">Đăng nhập</string>
+    <string name="dangnhap_edt_user">Tài khoản</string>
+    <string name="dangnhap_edt_pass">Mật khẩu</string>
+
+    <string name="just_now">Vừa mới</string>
+
+    <!--Thông báo-->
+    <string name="mess_thongbao_error_network">Không thể tải thêm thông báo\nVui lòng kết nối mạng và thử lại</string>
+    <string name="mess_thongbao_error_pagetotal">Thông báo đã hết</string>
+    <string name="mess_thongbao_webview_error_network">Không thể tải thông báo\nVui lòng kết nối mạng và thử lại</string>
+    <string name="mess_thongbao_webview_cache">Thông báo đang hiển thị ở chế độ ngoại mạng\nKéo xuống để cập nhập mới</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!--Học phí-->
+    <string name="mess_hocphi_khongco">Không có dữ liệu học phí</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--TKB-->
+    <string name="mess_tkb_hocky_macdinh_set">Đã thiết lập học kỳ mặc định</string>
+    <string name="mess_tkb_ngay_error_macdinh">Vui lòng thiết lập học kỳ mặc định trong thời khóa biểu.</string>
+
+    <!--Trang chu-->
+    <string name="mess_logout_tile">Đăng xuất</string>
+    <string name="mess_logout_info">Nếu bạn đăng xuất TẤT CẢ dữ liệu của bạn sẽ bị mất.\nBạn vẫn muốn thực hiện ?</string>
+    <string name="bottom_sheet_title_hocky">Danh sách học kỳ</string>
+
+    <string name="dialog_title_text_color">Select a Text Color</string>
+    <string name="dialog_title_text_back_color">Select a Text Background Color</string>
+
+    <!-- Insert Table -->
+    <string name="title_insert_table">Insert Table</string>
+    <string name="hint_no_of_columns">Number of columns</string>
+    <string name="hint_no_of_rows">Number of rows</string>
+
+    <!-- Insert Link -->
+    <string name="title_insert_link">Insert Link</string>
+    <string name="hint_text_to_display">Text to display</string>
+    <string name="hint_link_to">Link to</string>
+    <string name="insert">Insert</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="m_news">THÔNG BÁO</string>
+    <string name="m_news_summary">Nhận thông báo mới từ Đoàn Trường</string>
+    <string name="m_email">EMAIL</string>
+    <string name="m_email_summary">Email sinh viên</string>
+    <string name="m_schedule">TKB</string>
+    <string name="m_schedule_summary">Thông tin lịch học các học kỳ</string>
+    <string name="m_examschedule">LỊCH THI</string>
+    <string name="m_examschedule_summary">Thông tin lịch thi các học kỳ</string>
+    <string name="m_grades">ĐIỂM</string>
+    <string name="m_grades_summary">Tổng hợp kết quả học tập</string>
+    <string name="m_eaa">HOẠT ĐỘNG</string>
+    <string name="m_eaa_summary">Điểm dánh giá các hoạt động phong trào</string>
+    <string name="m_tuitionfee">HỌC PHÍ</string>
+    <string name="m_tuitionfee_summary">Thông tin học phí học kỳ</string>
+    <string name="m_sakai">SAKAI</string>
+    <string name="m_sakai_summary">sakai</string>
+    <string name="m_cs">CNSV</string>
+    <string name="m_onlines">NĐTT</string>
+    <string name="m_bugreport">BÁO LỖI</string>
+    <string name="m_bugreport_summary">báo lỗi</string>
+    <string name="new_version">Phiên bản mới:</string>
+    <string name="no">Không</string>
+    <string name="yes">Có</string>
+    <string name="logout">Đăng xuất</string>
+    <string name="update">Cập nhật</string>
+    <string name="hello">Chào </string>
+    <string name="m_sinfo">THÔNG TIN SV</string>
+</resources>
