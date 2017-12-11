@@ -29,6 +29,7 @@ import java.util.Map;
 import com.simonvn.tdtu.student.BuildConfig;
 import com.simonvn.tdtu.student.MainActivity;
 import com.simonvn.tdtu.student.R;
+import com.simonvn.tdtu.student.actitities.chat.ChatActivity;
 import com.simonvn.tdtu.student.fragments.trangchu.TrangchuMenuFragment;
 import com.simonvn.tdtu.student.models.User;
 import com.simonvn.tdtu.student.models.firebase.News;
@@ -119,6 +120,7 @@ public class TrangchuActivity extends AppCompatActivity{
                 logOut();
             }
         });
+
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
