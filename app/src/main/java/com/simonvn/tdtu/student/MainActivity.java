@@ -1,11 +1,13 @@
 package com.simonvn.tdtu.student;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.simonvn.tdtu.student.actitities.Drawer;
 import com.simonvn.tdtu.student.actitities.dangnhap.DangnhapActivity;
-import com.simonvn.tdtu.student.actitities.trangchu.TrangchuActivity;
 import com.simonvn.tdtu.student.models.User;
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
@@ -33,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         user = realm.where(User.class).findFirst();
 
         if(user != null){
-            Intent trangChu = new Intent(MainActivity.this, TrangchuActivity.class);
+            Intent trangChu = new Intent(MainActivity.this, Drawer.class);
             startActivity(trangChu);
             finish();
         }else {

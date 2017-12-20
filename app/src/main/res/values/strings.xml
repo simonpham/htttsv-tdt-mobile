@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">TDTU Student</string>
-    <string name="app_name_calendar">TDTU Schedule</string>
+    <string name="app_name">uStudent</string>
+    <string name="app_name_calendar">uSchedule</string>
     <!-- Dang nhap -->
     <string name="mess_error_user">Please enter username!</string>
     <string name="mess_error_password">Please enter password!</string>
@@ -47,31 +47,46 @@
     <string name="insert">Insert</string>
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
-    <string name="m_news">ANNOUNCEMENTS</string>
+    <string name="m_news">Announcements</string>
     <string name="m_news_summary">Receive announcements from TDTU</string>
-    <string name="m_email">EMAIL</string>
+    <string name="m_email">Email</string>
     <string name="m_email_summary">Student email</string>
-    <string name="m_schedule">SCHEDULE</string>
+    <string name="m_schedule">Schedule</string>
     <string name="m_schedule_summary">Thông tin lịch học các học kỳ</string>
-    <string name="m_examschedule">EXAM SCHEDULE</string>
+    <string name="m_examschedule">Exam Schedule</string>
     <string name="m_examschedule_summary">Thông tin lịch thi các học kỳ</string>
-    <string name="m_grades">GRADES</string>
+    <string name="m_grades">Grades</string>
     <string name="m_grades_summary">Tổng hợp kết quả học tập</string>
-    <string name="m_eaa">EXTRA CURRICULAR</string>
+    <string name="m_eaa">Extra Curricular</string>
     <string name="m_eaa_summary">Điểm dánh giá các hoạt động phong trào</string>
-    <string name="m_tuitionfee">TUITION FEES</string>
+    <string name="m_tuitionfee">Tuition Fees</string>
     <string name="m_tuitionfee_summary">Thông tin học phí học kỳ</string>
-    <string name="m_sakai">SAKAI</string>
+    <string name="m_sakai">Sakai</string>
     <string name="m_sakai_summary">sakai</string>
-    <string name="m_cs">VERIFICATION</string>
-    <string name="m_onlines">ONLINE APPLICATION</string>
-    <string name="m_bugreport">BUG REPORT</string>
+    <string name="m_cs">Verification</string>
+    <string name="m_onlines">Online Application</string>
+    <string name="m_bugreport">Bug Report</string>
     <string name="m_bugreport_summary">báo lỗi</string>
-    <string name="new_version">" New version:"</string>
+    <string name="new_version">" New version: "</string>
     <string name="no">No</string>
     <string name="yes">Yes</string>
     <string name="logout">Logout</string>
     <string name="update">Update</string>
     <string name="hello">Hi </string>
-    <string name="m_sinfo">STUDENT'S INFO</string>
+    <string name="m_sinfo">Student's Info</string>
+    <string name="title_activity_drawer">uStudent Portal</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">uStudent</string>
+    <string name="nav_header_subtitle" translatable="false">studentid@student.tdt.edu.vn</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="ustudent_portal">uStudent Portal</string>
+    <string name="login">Login</string>
+    <string name="select_semester">Select semester</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="portal">Portal</string>
+    <string name="switch_en_vi">English/Tiếng Việt</string>
+    <string name="about">About</string>
+    <string name="switch_locale">Chuyển sang tiếng Việt</string>
 </resources>

@@ -1,16 +1,31 @@
-package com.simonvn.tdtu.student.actitities.trangchu;
+package com.simonvn.tdtu.student.actitities;
 
 import android.Manifest;
 import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
 import android.view.View;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.Window;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -22,14 +37,20 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-import java.util.HashMap;
-import java.util.Map;
-
 import com.simonvn.tdtu.student.BuildConfig;
 import com.simonvn.tdtu.student.MainActivity;
 import com.simonvn.tdtu.student.R;
-import com.simonvn.tdtu.student.actitities.chat.ChatActivity;
+import com.simonvn.tdtu.student.actitities.cnsv.CnsvActivity;
+import com.simonvn.tdtu.student.actitities.diem.DiemActivity;
+import com.simonvn.tdtu.student.actitities.email.EmailActivity;
+import com.simonvn.tdtu.student.actitities.email.EmailNewActivity;
+import com.simonvn.tdtu.student.actitities.hdpt.HdptActivity;
+import com.simonvn.tdtu.student.actitities.hocphi.HocphiActivity;
+import com.simonvn.tdtu.student.actitities.lichthi.LichThiActivity;
+import com.simonvn.tdtu.student.actitities.ndtt.NdttActivity;
+import com.simonvn.tdtu.student.actitities.sakai.SakaiActivity;
+import com.simonvn.tdtu.student.actitities.thongbao.ThongbaoActivity;
+import com.simonvn.tdtu.student.actitities.tkb.TkbActivity;
 import com.simonvn.tdtu.student.fragments.trangchu.TrangchuMenuFragment;
 import com.simonvn.tdtu.student.models.User;
 import com.simonvn.tdtu.student.models.firebase.News;
@@ -37,10 +58,17 @@ import com.simonvn.tdtu.student.models.firebase.UpdateApp;
 import com.simonvn.tdtu.student.models.firebase.UserOnline;
 import com.simonvn.tdtu.student.utils.StringUtil;
 import com.simonvn.tdtu.student.views.widget.SnowingView;
+
+import java.util.HashMap;
+import java.util.Locale;
+import java.util.Map;
+
 import io.realm.Realm;
 import ru.alexbykov.nopermission.PermissionHelper;
 
-public class TrangchuActivity extends AppCompatActivity{
+public class Drawer extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
+
     private Realm realm;
     private User user;
 
@@ -76,6 +104,25 @@ public class TrangchuActivity extends AppCompatActivity{
 
     private SnowingView snowingView;
 
+    public void setLocale(String lang) {
+        SharedPreferences prefs = this.getSharedPreferences("com.simonvn.tdt.student", Context.MODE_PRIVATE);
+        Locale myLocale = new Locale(lang);
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.locale = myLocale;
+        res.updateConfiguration(conf, dm);
+        Intent refresh = new Intent(this, Drawer.class);
+
+        prefs.edit().putString("com.simonvn.tdtu.student.locale", lang).apply();
+
+        startActivity(refresh);
+        finish();
+    }
+    public String getLocale() {
+        Locale current = getResources().getConfiguration().locale;
+        return current.getLanguage();
+    }
 
     private void khoiTao(){
         realm = Realm.getDefaultInstance();
@@ -122,12 +169,38 @@ public class TrangchuActivity extends AppCompatActivity{
         });
 
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_trangchu);
+        setContentView(R.layout.activity_drawer);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        SharedPreferences prefs = this.getSharedPreferences("com.simonvn.tdt.student", Context.MODE_PRIVATE);
+
+
+        String locale = prefs.getString("com.simonvn.tdtu.student.locale", "en");
+        if (!(locale.equals(getLocale()))) {
+            setLocale(locale);
+        }
+
         anhXa();
         addPaper();
+
+        getSupportActionBar().setTitle(getString(R.string.hello) + name.getText().toString());
+
+        /*
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+        */
 
         PermissionHelper permissionHelper = new PermissionHelper(this); //getActivity in fragments
 
@@ -151,6 +224,15 @@ public class TrangchuActivity extends AppCompatActivity{
                     }
                 })
                 .run();
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
 
         userReference = mDatabase.child("UserOnline");
 /* test simon
@@ -203,7 +285,7 @@ public class TrangchuActivity extends AppCompatActivity{
                     Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(updateApp.downloadUrl));
                     startActivity(myIntent);
                 } catch (ActivityNotFoundException e) {
-                    Toast.makeText(TrangchuActivity.this, "No application can handle this request."
+                    Toast.makeText(Drawer.this, "No application can handle this request."
                             + " Please install a web browser",  Toast.LENGTH_LONG).show();
                     e.printStackTrace();
                 }
@@ -226,8 +308,13 @@ public class TrangchuActivity extends AppCompatActivity{
         });
         newsReference.addValueEventListener(eventListenerHashMap.get(KEY_EVENT_NEWS));
 
-    }
+        // select dashboard on startup
+        navigationView.getMenu().getItem(0).setChecked(true);
+        onNavigationItemSelected(navigationView.getMenu().getItem(0));
+        navigationView.setItemIconTintList(null);
 
+
+    }   // end onCreate
 
     private void changeSnowView(int calendar) {
         switch (calendar){
@@ -282,12 +369,11 @@ public class TrangchuActivity extends AppCompatActivity{
 
     private void checkUpdate(){
         if(updateApp == null)
-            return;
-        if(BuildConfig.VERSION_NAME.equals(updateApp.ver)){
+            return;if(BuildConfig.VERSION_NAME.equals(updateApp.ver)){
             layoutUpdate.setVisibility(View.GONE);
             return;
         }
-        String title = getString(R.string.new_version) + updateApp.ver + " - " + StringUtil.getDate(updateApp.time, "dd/MM/yyyy");
+        String title = getString(R.string.new_version) + updateApp.ver + " - " + new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new java.util.Date (news.time*1000));
         tvTileUpdate.setText(title);
         logUpdate.getSettings().setJavaScriptEnabled(true);
         logUpdate.setBackgroundColor(Color.TRANSPARENT);
@@ -318,12 +404,112 @@ public class TrangchuActivity extends AppCompatActivity{
                         realm.beginTransaction();
                         realm.deleteAll();
                         realm.commitTransaction();
-                        Intent mainActicity = new Intent(TrangchuActivity.this, MainActivity.class);
+                        Intent mainActicity = new Intent(Drawer.this, MainActivity.class);
                         startActivity(mainActicity);
                         finish();
                     }
                 })
                 .show();
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.drawer, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            if (getLocale().equals("en")) {
+                setLocale("vi");
+            } else {
+                setLocale("en");
+            }
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.nav_dashboard) {
+            // Handle the camera action
+        } else if (id == R.id.nav_news) {
+            Intent thongBao = new Intent(this, ThongbaoActivity.class);
+            startActivity(thongBao);
+        } else if (id == R.id.nav_email) {
+            Intent email = new Intent(this, EmailActivity.class);
+            startActivity(email);
+        } else if (id == R.id.nav_schedule) {
+            Intent tkb = new Intent(this, TkbActivity.class);
+            startActivity(tkb);
+        } else if (id == R.id.nav_exam) {
+            Intent lichthi = new Intent(this, LichThiActivity.class);
+            startActivity(lichthi);
+        } else if (id == R.id.nav_grades) {
+            Intent diem = new Intent(this, DiemActivity.class);
+            startActivity(diem);
+        } else if (id == R.id.nav_extrac) {
+            Intent hdpt = new Intent(this, HdptActivity.class);
+            startActivity(hdpt);
+        } else if (id == R.id.nav_fee) {
+            Intent hocphi = new Intent(this, HocphiActivity.class);
+            startActivity(hocphi);
+        } else if (id == R.id.nav_sakai) {
+            Intent sakai = new Intent(this, SakaiActivity.class);
+            startActivity(sakai);
+        } else if (id == R.id.nav_verify) {
+            Intent cnsv = new Intent(this, CnsvActivity.class);
+            startActivity(cnsv);
+        } else if (id == R.id.nav_onlineapp) {
+            Intent ndtt = new Intent(this, NdttActivity.class);
+            startActivity(ndtt);
+        } else if (id == R.id.nav_switchlang) {
+            if (getLocale().equals("en")) {
+                setLocale("vi");
+            } else {
+                setLocale("en");
+            }
+        } else if (id == R.id.nav_bugs) {
+            Intent emailBug = new Intent(this, EmailNewActivity.class);
+            emailBug.putExtra(EmailNewActivity.EXTRA_BUG, true);
+            emailBug.putExtra(EmailNewActivity.EXTRA_TO, "51702071@student.tdt.edu.vn");
+            emailBug.putExtra(EmailNewActivity.EXTRA_SUBJECT, "Báo lỗi");
+            startActivity(emailBug);
+        } else if (id == R.id.nav_about) {
+            Intent about = new Intent(this, AboutActivity.class);
+            startActivity(about);
+        } else if (id == R.id.nav_logout) {
+            logOut();
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
     }
 
     @Override

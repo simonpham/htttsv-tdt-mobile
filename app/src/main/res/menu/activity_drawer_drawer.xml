@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_dashboard"
+            android:title="@string/dashboard" />
+    </group>
+
+    <item android:title="@string/portal" >
+        <menu>
+            <item
+                android:id="@+id/nav_news"
+                android:icon="@drawable/icon_menu_0"
+                android:title="@string/m_news" />
+            <item
+                android:id="@+id/nav_email"
+                android:icon="@drawable/icon_menu_1"
+                android:title="@string/m_email" />
+            <item
+                android:id="@+id/nav_schedule"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/icon_menu_2"
+                android:title="@string/m_schedule" />
+            <item
+                android:id="@+id/nav_exam"
+                android:icon="@drawable/icon_menu_3"
+                android:title="@string/m_examschedule" />
+            <item
+                android:id="@+id/nav_grades"
+                android:icon="@drawable/icon_menu_4"
+                android:title="@string/m_grades" />
+            <item
+                android:id="@+id/nav_extrac"
+                android:icon="@drawable/icon_menu_5"
+                android:title="@string/m_eaa" />
+            <item
+                android:id="@+id/nav_fee"
+                android:icon="@drawable/icon_menu_7"
+                android:title="@string/m_tuitionfee" />
+            <item
+                android:id="@+id/nav_sakai"
+                android:icon="@drawable/icon_menu_11"
+                android:title="@string/m_sakai" />
+            <item
+                android:id="@+id/nav_verify"
+                android:icon="@drawable/icon_menu_8"
+                android:title="@string/m_cs" />
+            <item
+                android:id="@+id/nav_onlineapp"
+                android:icon="@drawable/icon_menu_9"
+                android:title="@string/m_onlines" />
+        </menu>
+    </item>
+
+    <item android:title="@string/action_settings" >
+        <menu>
+            <item
+                android:id="@+id/nav_switchlang"
+                android:icon="@drawable/ic_language"
+                android:title="@string/switch_locale" />
+            <item
+                android:id="@+id/nav_about"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_about"
+                android:title="@string/about" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="@string/logout" />
+            <item
+                android:id="@+id/nav_bugs"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_bug_report"
+                android:title="@string/m_bugreport" />
+        </menu>
+    </item>
+
+</menu>

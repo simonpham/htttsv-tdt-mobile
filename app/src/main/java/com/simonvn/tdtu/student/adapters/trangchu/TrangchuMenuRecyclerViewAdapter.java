@@ -74,6 +74,7 @@ public class TrangchuMenuRecyclerViewAdapter extends RecyclerView.Adapter<Recycl
             title.setSingleLine(false);
             title.setMaxLines(2);
             title.setMinLines(2);
+            title.setAllCaps(true);
         }
 
         @Override

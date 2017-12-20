@@ -25,7 +25,7 @@ import java.io.IOException;
 import com.simonvn.tdtu.student.BuildConfig;
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.Token;
-import com.simonvn.tdtu.student.actitities.trangchu.TrangchuActivity;
+import com.simonvn.tdtu.student.actitities.Drawer;
 import com.simonvn.tdtu.student.api.Api;
 import com.simonvn.tdtu.student.models.ServiceConfig;
 import com.simonvn.tdtu.student.models.User;
@@ -221,7 +221,7 @@ public class DangnhapActivity extends Activity implements View.OnClickListener{
                 realm.copyToRealmOrUpdate(user);
                 realm.commitTransaction();
 
-                Intent trangChu = new Intent(DangnhapActivity.this, TrangchuActivity.class);
+                Intent trangChu = new Intent(DangnhapActivity.this, Drawer.class);
                 startActivity(trangChu);
                 finish();
 

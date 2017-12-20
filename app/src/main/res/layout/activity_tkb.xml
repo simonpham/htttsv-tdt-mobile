@@ -70,7 +70,7 @@
                                 android:textStyle="bold"
                                 android:textSize="16dp"
                                 android:textColor="@color/black"
-                                android:text="Chọn học kỳ" />
+                                android:text="@string/select_semester" />
                         </LinearLayout>
                     </com.balysv.materialripple.MaterialRippleLayout>
                 </LinearLayout>

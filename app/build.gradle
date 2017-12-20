@@ -1,27 +1,70 @@
+import java.text.SimpleDateFormat
+
 apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
-android {
-    compileSdkVersion 26
-    buildToolsVersion '26.0.2'
 
+def buildTime() {
+    def df = new SimpleDateFormat("MMddhhmm") // you can change it
+    df.setTimeZone(TimeZone.getTimeZone("UTC"))
+    return df.format(new Date())
+}
+
+def buildYear() {
+    def df = new SimpleDateFormat("YY") // you can change it
+    df.setTimeZone(TimeZone.getTimeZone("UTC"))
+    return df.format(new Date())
+}
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'simonvn'
+            keyPassword 'vaytah'
+            storeFile file('/home/simon/Android/simonpham.keystore')
+            storePassword 'vaytah'
+        }
+    }
+    compileSdkVersion 27
+    buildToolsVersion '27.0.2'
     defaultConfig {
         applicationId "com.simonvn.tdtu.student"
         minSdkVersion 16
-        targetSdkVersion 26
-        versionCode 8
-        versionName "6.171007"
+        targetSdkVersion 27
+        versionCode 2
+        versionName '3.0'
         vectorDrawables.useSupportLibrary = true
+        signingConfig signingConfigs.config
     }
     buildTypes {
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                outputFileName = "${variant.name}-${variant.versionName}.apk"
+            }
+        }
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            versionNameSuffix ".${defaultConfig.versionCode}.r${buildYear()}"
+        }
+        debug {
+            versionNameSuffix ".${defaultConfig.versionCode}.d${buildYear()}-${buildTime()}"
+        }
+        alpha {
+            versionNameSuffix ".${defaultConfig.versionCode}.alpha${buildTime()}"
         }
         repositories {
             maven { url 'https://oss.sonatype.org/content/repositories/ksoap2-android-releases' }
             maven { url 'https://jitpack.io' }
             jcenter()
         }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    productFlavors {
     }
 }
 ext {

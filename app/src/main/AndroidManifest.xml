@@ -29,7 +29,8 @@
             android:name=".actitities.dangnhap.DangnhapActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".actitities.trangchu.TrangchuActivity"
+            android:name=".actitities.Drawer"
+            android:configChanges="locale"
             android:screenOrientation="portrait" />
         <activity
             android:name=".actitities.thongbao.ThongbaoActivity"
@@ -130,6 +131,12 @@
         <activity android:name=".actitities.cnsv.CnsvActivity" />
         <activity android:name=".actitities.sakai.SakaiActivity" />
         <activity android:name=".actitities.sakai.SakaiViewActivity" />
+
+        <activity
+            android:name=".actitities.AboutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeAB" />
+
     </application>
 
 </manifest>

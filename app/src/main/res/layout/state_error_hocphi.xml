@@ -9,7 +9,7 @@
     <ImageView
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:src="@drawable/state_empty_hocphi" />
+        android:src="@drawable/no_comments" />
 
     <TextView
         android:layout_width="wrap_content"

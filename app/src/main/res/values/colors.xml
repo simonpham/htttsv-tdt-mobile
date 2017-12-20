@@ -47,4 +47,5 @@
     <color name="pink_pressed">#F06292</color>
     <color name="blue_semi_transparent">#802196F3</color>
     <color name="blue_semi_transparent_pressed">#8064B5F6</color>
+    <color name="gwhite">#80ffffff</color>
 </resources>
