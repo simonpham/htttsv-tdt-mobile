@@ -10,10 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.brandongogetap.stickyheaders.StickyLayoutManager;
-
-import java.util.ArrayList;
-import java.util.Calendar;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.actitities.OnChildSwipeRefreshListener;
 import com.simonvn.tdtu.student.adapters.lichthi.LichThiRecyclerViewAdapter;
@@ -23,6 +19,10 @@ import com.simonvn.tdtu.student.models.lichthi.LichThiItem;
 import com.simonvn.tdtu.student.models.lichthi.LichThiLichItem;
 import com.simonvn.tdtu.student.utils.Tag;
 import com.simonvn.tdtu.student.views.custom.TopSnappedStickyLayoutManager;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+
 import io.realm.Realm;
 import io.realm.RealmList;
 

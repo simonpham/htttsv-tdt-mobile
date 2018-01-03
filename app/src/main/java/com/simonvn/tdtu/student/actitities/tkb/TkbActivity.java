@@ -19,16 +19,6 @@ import android.widget.TextView;
 import com.astuetz.PagerSlidingTabStrip;
 import com.balysv.materialripple.MaterialRippleLayout;
 import com.kennyc.view.MultiStateView;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-
-import java.io.IOException;
-import java.util.ArrayList;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.Token;
 import com.simonvn.tdtu.student.actitities.OnChildSwipeRefreshListener;
@@ -46,6 +36,16 @@ import com.simonvn.tdtu.student.models.tkb.TkbLichItem;
 import com.simonvn.tdtu.student.models.tkb.TkbMonhocItem;
 import com.simonvn.tdtu.student.utils.Tag;
 import com.simonvn.tdtu.student.widget.TkbWidget;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
 import io.realm.Realm;
 import io.realm.RealmResults;
 
@@ -146,7 +146,13 @@ public class TkbActivity extends AppCompatActivity implements OnChildSwipeRefres
         btnChonHocKy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialogHocKy.show();
+                if (dialogHocKy != null) {
+                    try {
+                        dialogHocKy.show();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         });
 
@@ -230,18 +236,26 @@ public class TkbActivity extends AppCompatActivity implements OnChildSwipeRefres
     }
 
     private void getTkb(){
-        mMultiStateView.setViewState(MultiStateView.VIEW_STATE_LOADING);
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                new getTkb().execute("");
-            }
-        });
+        try {
+            mMultiStateView.setViewState(MultiStateView.VIEW_STATE_LOADING);
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    new getTkb().execute("");
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void onChildSwipeRefreshListener() {
-        getTkb();
+        try {
+            getTkb();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public class getTkb extends AsyncTask<String , Integer, String>{
@@ -436,7 +450,13 @@ public class TkbActivity extends AppCompatActivity implements OnChildSwipeRefres
 
     private void showDialogHocKy(){
         initDialogHocKy();
-        dialogHocKy.show();
+        if (dialogHocKy != null) {
+            try {
+                dialogHocKy.show();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private void showTkbHocky(){
@@ -474,7 +494,7 @@ public class TkbActivity extends AppCompatActivity implements OnChildSwipeRefres
             tenHocKys.add(e.getTenHocKy());
         }
 
-        dialogHocKy = new AlertDialog.Builder(this)
+        dialogHocKy = new AlertDialog.Builder(TkbActivity.this)
                 .setTitle(R.string.bottom_sheet_title_hocky)
                 .setAdapter(tenHocKys, new DialogInterface.OnClickListener() {
                     @Override
@@ -492,11 +512,15 @@ public class TkbActivity extends AppCompatActivity implements OnChildSwipeRefres
     }
 
     private void chonHocKy(int postition){
-        mMultiStateView.setViewState(MultiStateView.VIEW_STATE_CONTENT);
-        tvTiteHocKy.setText(tkbHockyItems.get(postition).getTenHocKy());
-        idHocKy = tkbHockyItems.get(postition).getId();
-        setIconDefault();
-        checkTkbOffline();
+        try {
+            mMultiStateView.setViewState(MultiStateView.VIEW_STATE_CONTENT);
+            tvTiteHocKy.setText(tkbHockyItems.get(postition).getTenHocKy());
+            idHocKy = tkbHockyItems.get(postition).getId();
+            setIconDefault();
+            checkTkbOffline();
+        } catch (Exception e) {
+            // do nothing
+        }
     }
 
     @Override

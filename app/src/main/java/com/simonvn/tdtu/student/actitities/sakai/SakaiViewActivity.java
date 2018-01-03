@@ -18,15 +18,15 @@ import android.webkit.WebView;
 import android.widget.TextView;
 
 import com.github.curioustechizen.ago.RelativeTimeTextView;
-
-import java.io.File;
-import java.util.ArrayList;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.adapters.sakai.SakaiAttachmentAdapter;
 import com.simonvn.tdtu.student.models.User;
 import com.simonvn.tdtu.student.models.sakai.ItemSakaiAnnouncement;
 import com.simonvn.tdtu.student.models.sakai.ItemSakaiAttachment;
+
+import java.io.File;
+import java.util.ArrayList;
+
 import io.realm.Realm;
 
 public class SakaiViewActivity extends AppCompatActivity {

@@ -16,16 +16,6 @@ import android.widget.TextView;
 import com.astuetz.PagerSlidingTabStrip;
 import com.balysv.materialripple.MaterialRippleLayout;
 import com.kennyc.view.MultiStateView;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-
-import java.io.IOException;
-import java.util.ArrayList;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.Token;
 import com.simonvn.tdtu.student.actitities.OnChildSwipeRefreshListener;
@@ -40,6 +30,16 @@ import com.simonvn.tdtu.student.models.hdpt.HdptHoatdongItem;
 import com.simonvn.tdtu.student.models.hdpt.HdptHockyItem;
 import com.simonvn.tdtu.student.models.hdpt.HdptItem;
 import com.simonvn.tdtu.student.models.hdpt.HdptTagDanhgiaItem;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
 import io.realm.Realm;
 import io.realm.RealmResults;
 
@@ -134,7 +134,13 @@ public class HdptActivity extends AppCompatActivity implements OnChildSwipeRefre
         btnChonHocKy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialogHocKy.show();
+                if (dialogHocKy != null) {
+                    try {
+                        dialogHocKy.show();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         });
         tvTiteHocKy = (TextView)findViewById(R.id.tvHocKy);
@@ -410,7 +416,13 @@ public class HdptActivity extends AppCompatActivity implements OnChildSwipeRefre
 
     private void showDialogHocKy(){
         initDialogHocKy();
-        dialogHocKy.show();
+        if (dialogHocKy != null) {
+            try {
+                dialogHocKy.show();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private void showHdptHocky(){

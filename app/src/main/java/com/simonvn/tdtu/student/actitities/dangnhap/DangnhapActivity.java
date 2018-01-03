@@ -15,13 +15,6 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-
-import java.io.IOException;
-
 import com.simonvn.tdtu.student.BuildConfig;
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.Token;
@@ -33,6 +26,14 @@ import com.simonvn.tdtu.student.service.CheckEmailService;
 import com.simonvn.tdtu.student.service.CheckNewsService;
 import com.simonvn.tdtu.student.service.ServiceUtils;
 import com.simonvn.tdtu.student.views.widget.MaterialSquareLoading;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+import java.io.IOException;
+
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 

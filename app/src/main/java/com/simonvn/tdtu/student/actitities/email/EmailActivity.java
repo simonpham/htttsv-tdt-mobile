@@ -21,6 +21,18 @@ import android.widget.Toast;
 
 import com.github.clans.fab.FloatingActionButton;
 import com.github.ybq.endless.Endless;
+import com.simonvn.tdtu.student.R;
+import com.simonvn.tdtu.student.Token;
+import com.simonvn.tdtu.student.adapters.email.EmailRecyclerViewAdapter;
+import com.simonvn.tdtu.student.api.Api;
+import com.simonvn.tdtu.student.fragments.dialog.EditServiceDialogFragment;
+import com.simonvn.tdtu.student.models.User;
+import com.simonvn.tdtu.student.models.email.EmailItem;
+import com.simonvn.tdtu.student.models.email.EmailPageSave;
+import com.simonvn.tdtu.student.service.CheckEmailService;
+import com.simonvn.tdtu.student.service.ServiceUtils;
+import com.simonvn.tdtu.student.utils.Tag;
+import com.simonvn.tdtu.student.utils.Util;
 import com.sun.mail.imap.IMAPFolder;
 
 import org.json.JSONException;
@@ -41,18 +53,6 @@ import javax.mail.NoSuchProviderException;
 import javax.mail.Session;
 import javax.mail.Store;
 
-import com.simonvn.tdtu.student.R;
-import com.simonvn.tdtu.student.Token;
-import com.simonvn.tdtu.student.adapters.email.EmailRecyclerViewAdapter;
-import com.simonvn.tdtu.student.api.Api;
-import com.simonvn.tdtu.student.fragments.dialog.EditServiceDialogFragment;
-import com.simonvn.tdtu.student.models.User;
-import com.simonvn.tdtu.student.models.email.EmailItem;
-import com.simonvn.tdtu.student.models.email.EmailPageSave;
-import com.simonvn.tdtu.student.service.CheckEmailService;
-import com.simonvn.tdtu.student.service.ServiceUtils;
-import com.simonvn.tdtu.student.utils.Tag;
-import com.simonvn.tdtu.student.utils.Util;
 import io.realm.Realm;
 import io.realm.RealmResults;
 import io.realm.Sort;

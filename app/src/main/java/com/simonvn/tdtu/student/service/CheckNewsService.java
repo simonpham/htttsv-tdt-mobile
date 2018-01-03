@@ -13,6 +13,15 @@ import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
+import com.simonvn.tdtu.student.R;
+import com.simonvn.tdtu.student.Token;
+import com.simonvn.tdtu.student.actitities.thongbao.ThongbaoActivity;
+import com.simonvn.tdtu.student.api.Api;
+import com.simonvn.tdtu.student.models.User;
+import com.simonvn.tdtu.student.models.thongbao.ThongbaoItem;
+import com.simonvn.tdtu.student.utils.StringUtil;
+import com.simonvn.tdtu.student.utils.Util;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -22,14 +31,6 @@ import org.jsoup.nodes.Document;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.simonvn.tdtu.student.R;
-import com.simonvn.tdtu.student.Token;
-import com.simonvn.tdtu.student.actitities.thongbao.ThongbaoActivity;
-import com.simonvn.tdtu.student.api.Api;
-import com.simonvn.tdtu.student.models.User;
-import com.simonvn.tdtu.student.models.thongbao.ThongbaoItem;
-import com.simonvn.tdtu.student.utils.StringUtil;
-import com.simonvn.tdtu.student.utils.Util;
 import io.realm.Realm;
 
 

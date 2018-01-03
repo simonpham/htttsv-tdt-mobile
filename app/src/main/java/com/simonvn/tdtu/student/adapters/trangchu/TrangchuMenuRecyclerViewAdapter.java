@@ -10,12 +10,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.balysv.materialripple.MaterialRippleLayout;
-
-import java.util.ArrayList;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.models.trangchu.TrangchuMenuItem;
 import com.simonvn.tdtu.student.utils.ColorGenerator;
+
+import java.util.ArrayList;
 
 /**
  * Created by Bichan on 7/18/2016.

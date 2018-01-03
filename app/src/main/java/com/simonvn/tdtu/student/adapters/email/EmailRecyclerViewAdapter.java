@@ -10,11 +10,10 @@ import android.widget.TextView;
 
 import com.balysv.materialripple.MaterialRippleLayout;
 import com.github.curioustechizen.ago.RelativeTimeTextView;
-
-import java.util.List;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.models.email.EmailItem;
+
+import java.util.List;
 
 /**
  * Created by Bichan on 7/20/2016.

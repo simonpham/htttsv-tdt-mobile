@@ -12,16 +12,6 @@ import android.view.ViewGroup;
 
 import com.brandongogetap.stickyheaders.StickyLayoutManager;
 import com.github.ybq.endless.Endless;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-
-import java.io.IOException;
-import java.util.ArrayList;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.Token;
 import com.simonvn.tdtu.student.actitities.thongbao.ThongbaoWebviewActivity;
@@ -32,6 +22,16 @@ import com.simonvn.tdtu.student.models.thongbao.ThongbaoItem;
 import com.simonvn.tdtu.student.utils.StringUtil;
 import com.simonvn.tdtu.student.utils.Tag;
 import com.simonvn.tdtu.student.views.custom.TopSnappedStickyLayoutManager;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
 import io.realm.Realm;
 import io.realm.RealmResults;
 import io.realm.Sort;

@@ -11,16 +11,6 @@ import android.view.View;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.kennyc.view.MultiStateView;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-
-import java.io.IOException;
-import java.util.ArrayList;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.Token;
 import com.simonvn.tdtu.student.adapters.thongbao.FragmentAdapter;
@@ -31,6 +21,16 @@ import com.simonvn.tdtu.student.models.hocphi.HockyItem;
 import com.simonvn.tdtu.student.models.hocphi.HocphiChitiet;
 import com.simonvn.tdtu.student.models.hocphi.HocphiItem;
 import com.simonvn.tdtu.student.utils.Tag;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
 import io.realm.Realm;
 import io.realm.RealmList;
 import io.realm.RealmResults;

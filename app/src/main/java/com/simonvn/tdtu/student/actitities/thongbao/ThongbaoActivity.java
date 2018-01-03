@@ -13,16 +13,6 @@ import android.widget.Toast;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.kennyc.view.MultiStateView;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-
-import java.io.IOException;
-import java.util.ArrayList;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.Token;
 import com.simonvn.tdtu.student.adapters.thongbao.FragmentAdapter;
@@ -33,11 +23,20 @@ import com.simonvn.tdtu.student.models.User;
 import com.simonvn.tdtu.student.models.thongbao.DonviItem;
 import com.simonvn.tdtu.student.models.thongbao.ThongbaoCache;
 import com.simonvn.tdtu.student.models.thongbao.ThongbaoItem;
-import com.simonvn.tdtu.student.service.CheckEmailService;
 import com.simonvn.tdtu.student.service.CheckNewsService;
 import com.simonvn.tdtu.student.service.ServiceUtils;
 import com.simonvn.tdtu.student.utils.Tag;
 import com.simonvn.tdtu.student.utils.Util;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
 import io.realm.Realm;
 import io.realm.RealmResults;
 
@@ -192,7 +191,7 @@ public class ThongbaoActivity extends AppCompatActivity {
             if(Util.isNetworkAvailable(this)){
                 getDonVi();
             }else {
-                Toast.makeText(this, "Bạn đang ở chế độ Offline.", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.offline_msg, Toast.LENGTH_LONG).show();
             }
         }
     }

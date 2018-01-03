@@ -21,6 +21,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.github.curioustechizen.ago.RelativeTimeTextView;
+import com.simonvn.tdtu.student.R;
+import com.simonvn.tdtu.student.adapters.email.EmailAttachmentAdapter;
+import com.simonvn.tdtu.student.models.User;
+import com.simonvn.tdtu.student.models.email.EmailAttachment;
+import com.simonvn.tdtu.student.models.email.EmailItem;
+import com.simonvn.tdtu.student.utils.Tag;
 import com.sun.mail.imap.IMAPFolder;
 
 import java.io.File;
@@ -37,12 +43,6 @@ import javax.mail.Session;
 import javax.mail.Store;
 import javax.mail.internet.MimeBodyPart;
 
-import com.simonvn.tdtu.student.R;
-import com.simonvn.tdtu.student.adapters.email.EmailAttachmentAdapter;
-import com.simonvn.tdtu.student.models.User;
-import com.simonvn.tdtu.student.models.email.EmailAttachment;
-import com.simonvn.tdtu.student.models.email.EmailItem;
-import com.simonvn.tdtu.student.utils.Tag;
 import io.realm.Realm;
 
 public class EmailViewActivity extends AppCompatActivity {

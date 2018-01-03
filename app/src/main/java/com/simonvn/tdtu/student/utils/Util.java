@@ -4,6 +4,9 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
+import com.simonvn.tdtu.student.models.TietHoc;
+import com.simonvn.tdtu.student.models.email.EmailAttachment;
+import com.simonvn.tdtu.student.models.email.EmailItem;
 import com.sun.mail.imap.IMAPFolder;
 
 import org.jsoup.Jsoup;
@@ -21,10 +24,6 @@ import javax.mail.Multipart;
 import javax.mail.Part;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
-
-import com.simonvn.tdtu.student.models.TietHoc;
-import com.simonvn.tdtu.student.models.email.EmailAttachment;
-import com.simonvn.tdtu.student.models.email.EmailItem;
 
 import static android.content.Context.CONNECTIVITY_SERVICE;
 

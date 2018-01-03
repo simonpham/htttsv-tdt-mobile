@@ -27,6 +27,12 @@ import com.jkcarino.rtexteditorview.RTextEditorToolbar;
 import com.jkcarino.rtexteditorview.RTextEditorView;
 import com.nononsenseapps.filepicker.FilePickerActivity;
 import com.nononsenseapps.filepicker.Utils;
+import com.simonvn.tdtu.student.R;
+import com.simonvn.tdtu.student.adapters.email.EmailAttchmentNewAdapter;
+import com.simonvn.tdtu.student.fragments.dialog.InsertLinkDialogFragment;
+import com.simonvn.tdtu.student.fragments.dialog.InsertTableDialogFragment;
+import com.simonvn.tdtu.student.models.User;
+import com.simonvn.tdtu.student.models.email.EmailItem;
 import com.sun.mail.imap.IMAPFolder;
 
 import java.io.File;
@@ -53,12 +59,6 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
-import com.simonvn.tdtu.student.R;
-import com.simonvn.tdtu.student.adapters.email.EmailAttchmentNewAdapter;
-import com.simonvn.tdtu.student.fragments.dialog.InsertLinkDialogFragment;
-import com.simonvn.tdtu.student.fragments.dialog.InsertTableDialogFragment;
-import com.simonvn.tdtu.student.models.User;
-import com.simonvn.tdtu.student.models.email.EmailItem;
 import io.realm.Realm;
 import io.realm.RealmResults;
 import io.realm.Sort;

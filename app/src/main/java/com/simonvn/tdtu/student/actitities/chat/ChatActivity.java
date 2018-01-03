@@ -6,11 +6,8 @@ import android.support.v7.widget.AppCompatImageButton;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.util.Log;
 import android.view.View;
-import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.Switch;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -19,9 +16,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.rm.rmswitch.RMSwitch;
-
-import java.util.ArrayList;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.adapters.chat.ChatAdapter;
 import com.simonvn.tdtu.student.adapters.chat.UserOnlineAdapter;
@@ -31,6 +25,9 @@ import com.simonvn.tdtu.student.models.firebase.Chat;
 import com.simonvn.tdtu.student.models.firebase.ChatShow;
 import com.simonvn.tdtu.student.models.firebase.ChatUser;
 import com.simonvn.tdtu.student.models.firebase.UserOnline;
+
+import java.util.ArrayList;
+
 import io.realm.Realm;
 
 public class ChatActivity extends AppCompatActivity {

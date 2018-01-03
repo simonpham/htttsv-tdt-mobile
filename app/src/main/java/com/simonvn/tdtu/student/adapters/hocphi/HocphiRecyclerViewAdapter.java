@@ -5,8 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.List;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.models.hocphi.HocphiChitiet;
 import com.simonvn.tdtu.student.models.hocphi.HocphiHeaderItem;
@@ -18,6 +16,8 @@ import com.simonvn.tdtu.student.viewholder.hocphi.HocphiHeaderViewHolder;
 import com.simonvn.tdtu.student.viewholder.hocphi.HocphiMucViewHolder;
 import com.simonvn.tdtu.student.viewholder.hocphi.HocphiThanhtoanViewHolder;
 import com.simonvn.tdtu.student.viewholder.hocphi.HocphiTitleViewHolder;
+
+import java.util.List;
 
 /**
  * Created by Bichan on 7/16/2016.

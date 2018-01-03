@@ -11,21 +11,18 @@ import android.content.res.Resources;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AlertDialog;
-import android.util.DisplayMetrics;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.Window;
+import android.view.View;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -56,7 +53,6 @@ import com.simonvn.tdtu.student.models.User;
 import com.simonvn.tdtu.student.models.firebase.News;
 import com.simonvn.tdtu.student.models.firebase.UpdateApp;
 import com.simonvn.tdtu.student.models.firebase.UserOnline;
-import com.simonvn.tdtu.student.utils.StringUtil;
 import com.simonvn.tdtu.student.views.widget.SnowingView;
 
 import java.util.HashMap;
@@ -368,17 +364,22 @@ public class Drawer extends AppCompatActivity
     }
 
     private void checkUpdate(){
-        if(updateApp == null)
-            return;if(BuildConfig.VERSION_NAME.equals(updateApp.ver)){
-            layoutUpdate.setVisibility(View.GONE);
-            return;
+        try {
+            if(updateApp == null)
+                return;
+            if(BuildConfig.VERSION_NAME.equals(updateApp.ver)){
+                layoutUpdate.setVisibility(View.GONE);
+                return;
+            }
+            String title = getString(R.string.new_version) + updateApp.ver + " - " + new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new java.util.Date (updateApp.time*1000));
+            tvTileUpdate.setText(title);
+            logUpdate.getSettings().setJavaScriptEnabled(true);
+            logUpdate.setBackgroundColor(Color.TRANSPARENT);
+            logUpdate.loadDataWithBaseURL("", updateApp.changelog, "text/html", "UTF-8", "");
+            layoutUpdate.setVisibility(View.VISIBLE);
+        } catch (Exception e) {
+            // do nothing
         }
-        String title = getString(R.string.new_version) + updateApp.ver + " - " + new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new java.util.Date (news.time*1000));
-        tvTileUpdate.setText(title);
-        logUpdate.getSettings().setJavaScriptEnabled(true);
-        logUpdate.setBackgroundColor(Color.TRANSPARENT);
-        logUpdate.loadDataWithBaseURL("", updateApp.changelog, "text/html", "UTF-8", "");
-        layoutUpdate.setVisibility(View.VISIBLE);
     }
 
     private void addPaper(){
@@ -444,6 +445,9 @@ public class Drawer extends AppCompatActivity
             } else {
                 setLocale("en");
             }
+            return true;
+        } else if (id == R.id.action_logout) {
+            logOut();
             return true;
         }
 

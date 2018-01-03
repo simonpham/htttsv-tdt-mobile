@@ -10,6 +10,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.simonvn.tdtu.student.R;
+import com.simonvn.tdtu.student.Token;
+import com.simonvn.tdtu.student.adapters.diem.DiemRecyclerViewAdapter;
+import com.simonvn.tdtu.student.api.Api;
+import com.simonvn.tdtu.student.models.User;
+import com.simonvn.tdtu.student.models.diem.Diem;
+import com.simonvn.tdtu.student.models.diem.DiemItem;
+import com.simonvn.tdtu.student.utils.Tag;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -19,14 +28,6 @@ import org.jsoup.nodes.Document;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import com.simonvn.tdtu.student.R;
-import com.simonvn.tdtu.student.Token;
-import com.simonvn.tdtu.student.adapters.diem.DiemRecyclerViewAdapter;
-import com.simonvn.tdtu.student.api.Api;
-import com.simonvn.tdtu.student.models.User;
-import com.simonvn.tdtu.student.models.diem.Diem;
-import com.simonvn.tdtu.student.models.diem.DiemItem;
-import com.simonvn.tdtu.student.utils.Tag;
 import io.realm.Realm;
 import io.realm.RealmList;
 

@@ -12,18 +12,18 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 import com.kennyc.view.MultiStateView;
-
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-
-import java.io.IOException;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.Token;
 import com.simonvn.tdtu.student.api.Api;
 import com.simonvn.tdtu.student.models.User;
 import com.simonvn.tdtu.student.models.thongbao.ThongbaoCache;
 import com.simonvn.tdtu.student.utils.Tag;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+import java.io.IOException;
+
 import io.realm.Realm;
 
 public class ThongbaoWebviewActivity extends AppCompatActivity {

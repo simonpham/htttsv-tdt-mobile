@@ -7,11 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.List;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.models.diem.DiemItem;
 import com.simonvn.tdtu.student.utils.Util;
+
+import java.util.List;
 
 /**
  * Created by Bichan on 7/17/2016.

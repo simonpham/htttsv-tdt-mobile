@@ -6,14 +6,6 @@ import android.content.Intent;
 import android.widget.RemoteViews;
 import android.widget.RemoteViewsService.RemoteViewsFactory;
 
-import org.joda.time.DateTime;
-import org.joda.time.Weeks;
-
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.Comparator;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.models.User;
 import com.simonvn.tdtu.student.models.tkb.TkbItem;
@@ -22,6 +14,15 @@ import com.simonvn.tdtu.student.models.tkb.TkbMonhocItem;
 import com.simonvn.tdtu.student.models.tkb.TkbMonhocShowItem;
 import com.simonvn.tdtu.student.models.tkb.TkbThuItem;
 import com.simonvn.tdtu.student.utils.Util;
+
+import org.joda.time.DateTime;
+import org.joda.time.Weeks;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
+
 import io.realm.Realm;
 
 /**

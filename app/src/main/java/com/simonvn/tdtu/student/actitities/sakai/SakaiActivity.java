@@ -16,6 +16,13 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.simonvn.tdtu.student.R;
+import com.simonvn.tdtu.student.adapters.sakai.SakaiAnnouncementAdapter;
+import com.simonvn.tdtu.student.models.User;
+import com.simonvn.tdtu.student.models.sakai.ItemSakaiAnnouncement;
+import com.simonvn.tdtu.student.models.sakai.ItemSakaiAttachment;
+import com.simonvn.tdtu.student.utils.Util;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -29,12 +36,6 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import com.simonvn.tdtu.student.R;
-import com.simonvn.tdtu.student.adapters.sakai.SakaiAnnouncementAdapter;
-import com.simonvn.tdtu.student.models.User;
-import com.simonvn.tdtu.student.models.sakai.ItemSakaiAnnouncement;
-import com.simonvn.tdtu.student.models.sakai.ItemSakaiAttachment;
-import com.simonvn.tdtu.student.utils.Util;
 import io.realm.Realm;
 import io.realm.RealmResults;
 

@@ -6,11 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.List;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.models.thongtin.ThongtinItem;
 import com.simonvn.tdtu.student.models.thongtin.ThongtinTitleItem;
+
+import java.util.List;
 
 /**
  * Created by Bichan on 7/17/2016.

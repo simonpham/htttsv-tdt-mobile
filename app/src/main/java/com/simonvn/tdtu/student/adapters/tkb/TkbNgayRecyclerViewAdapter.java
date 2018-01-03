@@ -9,13 +9,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.balysv.materialripple.MaterialRippleLayout;
-
-import java.util.List;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.models.tkb.TkbMonhocShowItem;
 import com.simonvn.tdtu.student.utils.ColorGenerator;
 import com.simonvn.tdtu.student.utils.GradientGenerator;
+
+import java.util.List;
 
 /**
  * Created by Bichan on 7/19/2016.

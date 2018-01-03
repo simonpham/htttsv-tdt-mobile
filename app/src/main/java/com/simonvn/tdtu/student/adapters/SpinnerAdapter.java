@@ -7,10 +7,10 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.simonvn.tdtu.student.R;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import com.simonvn.tdtu.student.R;
 
 
 /**

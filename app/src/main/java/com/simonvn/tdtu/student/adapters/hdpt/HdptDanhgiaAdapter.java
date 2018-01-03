@@ -6,14 +6,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.List;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.models.hdpt.HdptDanhgiaDiemItem;
 import com.simonvn.tdtu.student.models.hdpt.HdptDanhgiaItem;
 import com.simonvn.tdtu.student.models.hdpt.HdptDanhgiaTitleItem;
 import com.simonvn.tdtu.student.utils.ColorGenerator;
 import com.simonvn.tdtu.student.views.widget.RoundedLetterView;
+
+import java.util.List;
 
 /**
  * Created by Bichan on 7/28/2016.

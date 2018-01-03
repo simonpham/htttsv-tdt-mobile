@@ -13,16 +13,6 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.kennyc.view.MultiStateView;
-import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
-
-import org.joda.time.DateTime;
-import org.joda.time.Weeks;
-
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.Comparator;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.actitities.OnChildSwipeRefreshListener;
 import com.simonvn.tdtu.student.adapters.tkb.TkbNgayRecyclerViewAdapter;
@@ -34,6 +24,16 @@ import com.simonvn.tdtu.student.models.tkb.TkbMonhocShowItem;
 import com.simonvn.tdtu.student.models.tkb.TkbThuItem;
 import com.simonvn.tdtu.student.utils.Tag;
 import com.simonvn.tdtu.student.utils.Util;
+import com.wdullaer.materialdatetimepicker.date.DatePickerDialog;
+
+import org.joda.time.DateTime;
+import org.joda.time.Weeks;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
+
 import io.realm.Realm;
 
 

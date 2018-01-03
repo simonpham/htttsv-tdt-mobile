@@ -89,4 +89,6 @@
     <string name="dashboard">Bảng điều khiển</string>
     <string name="switch_locale">Switch to English</string>
     <string name="about">Thông tin</string>
+    <string name="switch_en_vi">English/Tiếng Việt</string>
+    <string name="offline_msg">You\'re offline.</string>
 </resources>

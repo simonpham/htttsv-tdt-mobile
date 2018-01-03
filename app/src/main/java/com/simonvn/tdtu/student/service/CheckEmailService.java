@@ -11,8 +11,13 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.support.v4.app.NotificationCompat;
-import android.util.Log;
 
+import com.simonvn.tdtu.student.R;
+import com.simonvn.tdtu.student.actitities.email.EmailActivity;
+import com.simonvn.tdtu.student.models.User;
+import com.simonvn.tdtu.student.models.email.EmailItem;
+import com.simonvn.tdtu.student.models.email.EmailPageSave;
+import com.simonvn.tdtu.student.utils.Util;
 import com.sun.mail.imap.IMAPFolder;
 
 import java.util.ArrayList;
@@ -26,13 +31,6 @@ import javax.mail.NoSuchProviderException;
 import javax.mail.Session;
 import javax.mail.Store;
 
-import com.simonvn.tdtu.student.R;
-import com.simonvn.tdtu.student.actitities.email.EmailActivity;
-import com.simonvn.tdtu.student.models.User;
-import com.simonvn.tdtu.student.models.email.EmailItem;
-import com.simonvn.tdtu.student.models.email.EmailPageSave;
-import com.simonvn.tdtu.student.models.thongbao.ThongbaoItem;
-import com.simonvn.tdtu.student.utils.Util;
 import io.realm.Realm;
 
 public class CheckEmailService extends IntentService {

@@ -8,12 +8,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.balysv.materialripple.MaterialRippleLayout;
+import com.simonvn.tdtu.student.R;
+import com.simonvn.tdtu.student.models.tkb.TkbTuanItem;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import com.simonvn.tdtu.student.R;
-import com.simonvn.tdtu.student.models.tkb.TkbTuanItem;
 
 /**
  * Created by bichan on 9/7/17.

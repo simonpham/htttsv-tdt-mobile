@@ -9,8 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.actitities.cnsv.CnsvActivity;
 import com.simonvn.tdtu.student.actitities.diem.DiemActivity;
@@ -26,6 +24,8 @@ import com.simonvn.tdtu.student.actitities.tkb.TkbActivity;
 import com.simonvn.tdtu.student.adapters.trangchu.TrangchuMenuRecyclerViewAdapter;
 import com.simonvn.tdtu.student.models.trangchu.TrangchuMenuItem;
 import com.simonvn.tdtu.student.utils.Tag;
+
+import java.util.ArrayList;
 
 
 public class TrangchuMenuFragment extends Fragment{

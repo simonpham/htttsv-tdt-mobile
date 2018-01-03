@@ -10,11 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.brandongogetap.stickyheaders.StickyLayoutManager;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.actitities.OnChildSwipeRefreshListener;
 import com.simonvn.tdtu.student.adapters.tkb.TkbTonghopRecyclerViewAdapter;
@@ -28,6 +23,11 @@ import com.simonvn.tdtu.student.models.tkb.TkbThuShowItem;
 import com.simonvn.tdtu.student.utils.Tag;
 import com.simonvn.tdtu.student.utils.Util;
 import com.simonvn.tdtu.student.views.custom.TopSnappedStickyLayoutManager;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
 import io.realm.Realm;
 
 

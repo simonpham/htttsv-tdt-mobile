@@ -10,8 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.actitities.OnChildSwipeRefreshListener;
 import com.simonvn.tdtu.student.adapters.hdpt.HdptDanhgiaAdapter;
@@ -22,6 +20,9 @@ import com.simonvn.tdtu.student.models.hdpt.HdptDanhgiaItem;
 import com.simonvn.tdtu.student.models.hdpt.HdptDanhgiaTitleItem;
 import com.simonvn.tdtu.student.models.hdpt.HdptItem;
 import com.simonvn.tdtu.student.models.hdpt.HdptTagDanhgiaItem;
+
+import java.util.ArrayList;
+
 import io.realm.Realm;
 
 

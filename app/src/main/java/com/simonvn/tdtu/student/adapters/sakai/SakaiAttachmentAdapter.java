@@ -7,12 +7,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.balysv.materialripple.MaterialRippleLayout;
+import com.simonvn.tdtu.student.R;
+import com.simonvn.tdtu.student.models.sakai.ItemSakaiAttachment;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import com.simonvn.tdtu.student.R;
-import com.simonvn.tdtu.student.models.sakai.ItemSakaiAttachment;
 
 /**
  * Created by bichan on 9/25/17.

@@ -7,12 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.simonvn.tdtu.student.R;
+import com.simonvn.tdtu.student.utils.Util;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-
-import com.simonvn.tdtu.student.R;
-import com.simonvn.tdtu.student.utils.Util;
 
 /**
  * Created by bichan on 9/23/17.

@@ -16,18 +16,6 @@ import android.widget.TextView;
 import com.astuetz.PagerSlidingTabStrip;
 import com.balysv.materialripple.MaterialRippleLayout;
 import com.kennyc.view.MultiStateView;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.Token;
 import com.simonvn.tdtu.student.actitities.OnChildSwipeRefreshListener;
@@ -40,6 +28,18 @@ import com.simonvn.tdtu.student.models.lichthi.LichThiHocKyItem;
 import com.simonvn.tdtu.student.models.lichthi.LichThiItem;
 import com.simonvn.tdtu.student.models.lichthi.LichThiLichItem;
 import com.simonvn.tdtu.student.utils.Tag;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
 import io.realm.Realm;
 import io.realm.RealmResults;
 
@@ -129,7 +129,13 @@ public class LichThiActivity extends AppCompatActivity implements OnChildSwipeRe
         btnChonHocKy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialogHocKy.show();
+                if (dialogHocKy != null) {
+                    try {
+                        dialogHocKy.show();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
             }
         });
 
@@ -423,7 +429,13 @@ public class LichThiActivity extends AppCompatActivity implements OnChildSwipeRe
 
     private void showDialogHocKy(){
         initDialogHocKy();
-        dialogHocKy.show();
+        if (dialogHocKy != null) {
+            try {
+                dialogHocKy.show();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private void showHocky(){

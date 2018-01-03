@@ -8,11 +8,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.widget.RemoteViews;
 
-import java.util.Calendar;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.actitities.tkb.TkbActivity;
 import com.simonvn.tdtu.student.utils.Util;
+
+import java.util.Calendar;
 
 /**
  * Implementation of App Widget functionality.

@@ -11,13 +11,12 @@ import android.widget.TextView;
 import com.balysv.materialripple.MaterialRippleLayout;
 import com.brandongogetap.stickyheaders.exposed.StickyHeaderHandler;
 import com.github.aakira.expandablelayout.ExpandableLinearLayout;
-
-import java.util.List;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.models.lichthi.LichThiDateShowItem;
 import com.simonvn.tdtu.student.models.lichthi.LichThiLichItem;
 import com.simonvn.tdtu.student.utils.GradientGenerator;
+
+import java.util.List;
 
 /**
  * Created by cuong on 5/3/2017.

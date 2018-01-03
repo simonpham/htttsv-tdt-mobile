@@ -75,11 +75,11 @@
     <string name="hello">Hi </string>
     <string name="m_sinfo">Student's Info</string>
     <string name="title_activity_drawer">uStudent Portal</string>
-    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
-    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
-    <string name="nav_header_title" translatable="false">uStudent</string>
-    <string name="nav_header_subtitle" translatable="false">studentid@student.tdt.edu.vn</string>
-    <string name="nav_header_desc" translatable="false">Navigation header</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">uStudent</string>
+    <string name="nav_header_subtitle">studentid@student.tdt.edu.vn</string>
+    <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="ustudent_portal">uStudent Portal</string>
     <string name="login">Login</string>
@@ -89,4 +89,5 @@
     <string name="switch_en_vi">English/Tiếng Việt</string>
     <string name="about">About</string>
     <string name="switch_locale">Chuyển sang tiếng Việt</string>
+    <string name="offline_msg">Bạn đang ở chế độ Offline.</string>
 </resources>

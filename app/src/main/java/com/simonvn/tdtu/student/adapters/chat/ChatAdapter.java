@@ -8,15 +8,14 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.github.curioustechizen.ago.RelativeTimeTextView;
-import com.squareup.picasso.Picasso;
-
-import java.util.ArrayList;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.models.firebase.Chat;
 import com.simonvn.tdtu.student.models.firebase.ChatDateShow;
 import com.simonvn.tdtu.student.models.firebase.ChatShow;
 import com.simonvn.tdtu.student.views.widget.CircleImageView;
+import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
 
 /**
  * Created by bichan on 8/29/17.

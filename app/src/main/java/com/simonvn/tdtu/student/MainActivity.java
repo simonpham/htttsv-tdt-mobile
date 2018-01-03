@@ -1,14 +1,13 @@
 package com.simonvn.tdtu.student;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.simonvn.tdtu.student.actitities.Drawer;
 import com.simonvn.tdtu.student.actitities.dangnhap.DangnhapActivity;
 import com.simonvn.tdtu.student.models.User;
+
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 

@@ -9,6 +9,14 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.simonvn.tdtu.student.R;
+import com.simonvn.tdtu.student.Token;
+import com.simonvn.tdtu.student.adapters.ndtt.NdttResultAdapter;
+import com.simonvn.tdtu.student.api.Api;
+import com.simonvn.tdtu.student.models.User;
+import com.simonvn.tdtu.student.models.ndtt.ItemNdttResult;
+import com.simonvn.tdtu.student.utils.Util;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -17,13 +25,6 @@ import org.jsoup.nodes.Document;
 
 import java.io.IOException;
 
-import com.simonvn.tdtu.student.R;
-import com.simonvn.tdtu.student.Token;
-import com.simonvn.tdtu.student.adapters.ndtt.NdttResultAdapter;
-import com.simonvn.tdtu.student.api.Api;
-import com.simonvn.tdtu.student.models.User;
-import com.simonvn.tdtu.student.models.ndtt.ItemNdttResult;
-import com.simonvn.tdtu.student.utils.Util;
 import io.realm.Realm;
 import io.realm.RealmResults;
 

@@ -6,10 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.models.ndtt.ItemNdttResult;
+
+import java.util.ArrayList;
 
 /**
  * Created by bichan on 9/25/17.

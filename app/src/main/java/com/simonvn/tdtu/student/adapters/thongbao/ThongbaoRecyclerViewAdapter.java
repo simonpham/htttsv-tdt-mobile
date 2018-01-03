@@ -9,13 +9,12 @@ import android.widget.TextView;
 
 import com.balysv.materialripple.MaterialRippleLayout;
 import com.brandongogetap.stickyheaders.exposed.StickyHeaderHandler;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.models.thongbao.ThongBaoDateItem;
 import com.simonvn.tdtu.student.models.thongbao.ThongbaoItem;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Bichan on 7/15/2016.

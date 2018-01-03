@@ -10,8 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
-
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.actitities.OnChildSwipeRefreshListener;
 import com.simonvn.tdtu.student.adapters.hdpt.HdptHoatdongAdapter;
@@ -19,6 +17,9 @@ import com.simonvn.tdtu.student.models.User;
 import com.simonvn.tdtu.student.models.diem.Diem;
 import com.simonvn.tdtu.student.models.hdpt.HdptHoatdongItem;
 import com.simonvn.tdtu.student.models.hdpt.HdptItem;
+
+import java.util.ArrayList;
+
 import io.realm.Realm;
 
 
