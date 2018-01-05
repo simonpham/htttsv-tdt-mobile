@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TDT Sinh viên</string>
-    <string name="app_name_calendar">TDT Lịch học</string>
+    <string name="app_name">uStudent</string>
     <!-- Dang nhap -->
     <string name="mess_error_user">Không được để trống</string>
     <string name="mess_error_password">Không được để trống</string>
@@ -65,8 +64,8 @@
     <string name="m_sakai_summary">sakai</string>
     <string name="m_cs">CNSV</string>
     <string name="m_onlines">NĐTT</string>
-    <string name="m_bugreport">BÁO LỖI</string>
-    <string name="m_bugreport_summary">báo lỗi</string>
+    <string name="m_bugreport">Báo lỗi</string>
+    <string name="m_bugreport_summary">Báo lỗi</string>
     <string name="new_version">Phiên bản mới:</string>
     <string name="no">Không</string>
     <string name="yes">Có</string>
@@ -90,4 +89,5 @@
     <string name="about">Thông tin</string>
     <string name="switch_en_vi">English/Tiếng Việt</string>
     <string name="offline_msg">You\'re offline.</string>
+    <string name="app_name_calendar">uSchedule</string>
 </resources>

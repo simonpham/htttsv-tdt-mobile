@@ -65,7 +65,7 @@
     <string name="m_cs">Verification</string>
     <string name="m_onlines">Online Application</string>
     <string name="m_bugreport">Bug Report</string>
-    <string name="m_bugreport_summary">báo lỗi</string>
+    <string name="m_bugreport_summary">Bug report</string>
     <string name="new_version">" New version: "</string>
     <string name="no">No</string>
     <string name="yes">Yes</string>
