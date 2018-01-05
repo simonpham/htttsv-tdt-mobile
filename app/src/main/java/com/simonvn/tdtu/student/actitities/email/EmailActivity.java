@@ -475,8 +475,12 @@ public class EmailActivity extends AppCompatActivity {
                 e.printStackTrace();
             } finally {
                 try {
-                    emailFolder.close(false);
-                    store.close();
+                    if (emailFolder != null) {
+                        emailFolder.close(false);
+                    }
+                    if (store != null) {
+                        store.close();
+                    }
                 } catch (MessagingException e) {
                     e.printStackTrace();
                 }
@@ -577,8 +581,12 @@ public class EmailActivity extends AppCompatActivity {
                 e.printStackTrace();
             } finally {
                 try {
-                    emailFolder.close(false);
-                    store.close();
+                    if (emailFolder != null) {
+                        emailFolder.close(false);
+                    }
+                    if (store != null) {
+                        store.close();
+                    }
                 } catch (MessagingException e) {
                     e.printStackTrace();
                 }
@@ -677,8 +685,12 @@ public class EmailActivity extends AppCompatActivity {
                 e.printStackTrace();
             } finally {
                 try {
-                    emailFolder.close(false);
-                    store.close();
+                    if (emailFolder != null) {
+                        emailFolder.close(false);
+                    }
+                    if (store != null) {
+                        store.close();
+                    }
                 } catch (MessagingException e) {
                     e.printStackTrace();
                 }
@@ -774,7 +786,7 @@ public class EmailActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
             }else{
-
+                // nothing
             }
         }
     }

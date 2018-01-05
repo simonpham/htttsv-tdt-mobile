@@ -177,8 +177,12 @@ public class CheckEmailService extends IntentService {
                 e.printStackTrace();
             } finally {
                 try {
-                    emailFolder.close(false);
-                    store.close();
+                    if (emailFolder != null) {
+                        emailFolder.close(false);
+                    }
+                    if (store != null) {
+                        store.close();
+                    }
                 } catch (MessagingException e) {
                     e.printStackTrace();
                 }

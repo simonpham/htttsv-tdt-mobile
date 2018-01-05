@@ -18,7 +18,6 @@
     <string name="mess_thongbao_error_pagetotal">Thông báo đã hết</string>
     <string name="mess_thongbao_webview_error_network">Không thể tải thông báo\nVui lòng kết nối mạng và thử lại</string>
     <string name="mess_thongbao_webview_cache">Thông báo đang hiển thị ở chế độ ngoại mạng\nKéo xuống để cập nhập mới</string>
-    <!-- TODO: Remove or change this placeholder text -->
 
     <!--Học phí-->
     <string name="mess_hocphi_khongco">Không có dữ liệu học phí</string>

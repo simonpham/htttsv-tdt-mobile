@@ -228,8 +228,12 @@ public class SakaiActivity extends AppCompatActivity {
                 e.printStackTrace();
             }finally {
                 try {
-                    inputStream.close();
-                    bufferedReader.close();
+                    if (inputStream != null) {
+                        inputStream.close();
+                    }
+                    if (bufferedReader != null) {
+                        bufferedReader.close();
+                    }
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

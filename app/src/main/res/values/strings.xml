@@ -17,7 +17,6 @@
     <string name="mess_thongbao_error_pagetotal">We didn't find anything to show here</string>
     <string name="mess_thongbao_webview_error_network">Cannot load announcements\nPlease check connection and try again</string>
     <string name="mess_thongbao_webview_cache">Announcements may be outdated\nPull down to update</string>
-    <!-- TODO: Remove or change this placeholder text -->
 
     <!--Học phí-->
     <string name="mess_hocphi_khongco">We didn't find anything to show here</string>

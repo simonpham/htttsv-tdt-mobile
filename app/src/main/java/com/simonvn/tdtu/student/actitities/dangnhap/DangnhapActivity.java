@@ -187,6 +187,7 @@ public class DangnhapActivity extends Activity implements View.OnClickListener{
                 }
                 return false;
             } catch (IOException e) {
+                // android 4.4 problem
                 return false;
             } catch (JSONException e) {
                 return false;

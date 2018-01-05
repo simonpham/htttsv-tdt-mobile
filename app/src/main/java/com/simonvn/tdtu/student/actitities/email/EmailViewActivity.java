@@ -299,6 +299,9 @@ public class EmailViewActivity extends AppCompatActivity {
         String fileUrl = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath()+ "/" + nameAttachment;
         DownloadManager downloadManager = (DownloadManager) getApplicationContext()
                 .getSystemService(getApplicationContext().DOWNLOAD_SERVICE);
+        if (downloadManager == null) {
+            return;
+        }
         downloadManager.addCompletedDownload(
                 fileAttachment.getName(),
                 fileAttachment.getName(),
