@@ -90,4 +90,13 @@
     <string name="switch_en_vi">English/Tiếng Việt</string>
     <string name="offline_msg">You\'re offline.</string>
     <string name="app_name_calendar">uSchedule</string>
+    <string name="tf_payment">THANH TOÁN</string>
+    <string name="tf_info">THÔNG TIN</string>
+    <string name="tf_borrowed">Nợ kỳ trước</string>
+    <string name="tf_sfee">Học phí học kỳ</string>
+    <string name="tf_discount">Miễn giảm</string>
+    <string name="tf_subtotal">Học phí phải nộp</string>
+    <string name="tf_paid">Học phí đã nộp</string>
+    <string name="tf_total">Số tiền còn phải nộp</string>
+    <string name="tf_details">CHI TIẾT</string>
 </resources>

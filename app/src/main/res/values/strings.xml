@@ -89,4 +89,13 @@
     <string name="about">About</string>
     <string name="switch_locale">Chuyển sang tiếng Việt</string>
     <string name="offline_msg">Bạn đang ở chế độ Offline.</string>
+    <string name="tf_payment">THANH TOÁN</string>
+    <string name="tf_info">THÔNG TIN</string>
+    <string name="tf_borrowed">Nợ kỳ trước</string>
+    <string name="tf_sfee">Học phí học kỳ</string>
+    <string name="tf_discount">Miễn giảm</string>
+    <string name="tf_subtotal">Học phí phải nộp</string>
+    <string name="tf_paid">Học phí đã nộp</string>
+    <string name="tf_total">Số tiền còn phải nộp</string>
+    <string name="tf_details">CHI TIẾT</string>
 </resources>

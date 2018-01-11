@@ -144,26 +144,26 @@ public class HocphiFragment extends Fragment {
                 mMultiStateView.setViewState(MultiStateView.VIEW_STATE_ERROR);
                 return;
             }
-            list.add(new HocphiHeaderItem(hocphiItem.getHocPhiPhaiNop(), hocphiItem.getNgayCapNhap()));
+            list.add(new HocphiHeaderItem(hocphiItem.getHocPhiHocKy(), hocphiItem.getNgayCapNhap()));
             RealmList<HocphiChitiet> hocphiChitiets = hocphiItem.getHocphiChitiets();
 
             if(hocphiItem.getHocphiThanhtoanItems().size() > 0)
-                list.add(new HocphiTitleItem("THANH TOÁN"));
+                list.add(new HocphiTitleItem(getString(R.string.tf_payment)));
 
             for(HocphiThanhtoanItem hocphiThanhtoanItem : hocphiItem.getHocphiThanhtoanItems()){
                 list.add(hocphiThanhtoanItem);
             }
 
-            list.add(new HocphiTitleItem("THÔNG TIN"));
-            list.add(new HocphiMucItem("Nợ kỳ trước", hocphiItem.getNoHocKyTruoc()));
-            list.add(new HocphiMucItem("Học phí học kỳ", hocphiItem.getHocPhiHocKy()));
-            list.add(new HocphiMucItem("Miễn giảm", hocphiItem.getMienGiam()));
-            list.add(new HocphiMucItem("Học phí phải nộp", hocphiItem.getHocPhiPhaiNop()));
-            list.add(new HocphiMucItem("Học phí đã nộp", hocphiItem.getHocPhiDaNop()));
-            list.add(new HocphiMucItem("Số tiền còn phải nộp", hocphiItem.getHocPhiConPhaiNop()));
+            list.add(new HocphiTitleItem(getString(R.string.tf_info)));
+            list.add(new HocphiMucItem(getString(R.string.tf_borrowed), hocphiItem.getNoHocKyTruoc()));
+            list.add(new HocphiMucItem(getString(R.string.tf_sfee), hocphiItem.getHocPhiPhaiNop())); // hoc phi hoc ky
+            list.add(new HocphiMucItem(getString(R.string.tf_discount), hocphiItem.getMienGiam()));
+            list.add(new HocphiMucItem(getString(R.string.tf_subtotal),  hocphiItem.getHocPhiHocKy()));  // hoc phi phai nop
+            list.add(new HocphiMucItem(getString(R.string.tf_paid), hocphiItem.getHocPhiDaNop()));
+            list.add(new HocphiMucItem(getString(R.string.tf_total), hocphiItem.getHocPhiConPhaiNop()));
 
             if(hocphiChitiets.size() > 0)
-                list.add(new HocphiTitleItem("CHI TIẾT"));
+                list.add(new HocphiTitleItem(getString(R.string.tf_details)));
             for(int i = 0 ; i < hocphiChitiets.size(); i++){
                 list.add(hocphiChitiets.get(i));
             }

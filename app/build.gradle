@@ -3,6 +3,10 @@ import java.text.SimpleDateFormat
 apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
 
+def buildTimestamp() {
+    return System.currentTimeMillis()/1000;
+}
+
 def buildTime() {
     def df = new SimpleDateFormat("MMddhhmm") // you can change it
     df.setTimeZone(TimeZone.getTimeZone("UTC"))
@@ -30,7 +34,7 @@ android {
         applicationId "com.simonvn.tdtu.student"
         minSdkVersion 21
         targetSdkVersion 27
-        versionCode 4
+        versionCode 5
         versionName '3.0'
         vectorDrawables.useSupportLibrary = true
         signingConfig signingConfigs.config
@@ -38,7 +42,7 @@ android {
     buildTypes {
         android.applicationVariants.all { variant ->
             variant.outputs.all {
-                outputFileName = "${variant.name}-${variant.versionName}.apk"
+                outputFileName = "${variant.name}-${variant.versionName}-${buildTimestamp()}.apk"
             }
         }
         release {

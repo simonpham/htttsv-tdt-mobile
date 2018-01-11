@@ -1,11 +1,14 @@
 package com.simonvn.tdtu.student.actitities;
 
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
 
@@ -15,6 +18,7 @@ public class AboutActivity extends AppCompatActivity {
 
     private TextView txtVer;
     private TextView welcome;
+    private TextView txtDev;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +35,7 @@ public class AboutActivity extends AppCompatActivity {
 
         txtVer = findViewById(R.id.txtVersion);
         welcome = findViewById(R.id.welcome2);
+        txtDev = findViewById(R.id.txtDev);
 
         String versionName = "";
         try {
@@ -40,6 +45,14 @@ public class AboutActivity extends AppCompatActivity {
         }
 
         txtVer.setText(versionName);
+        txtDev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uriUrl = Uri.parse("https://github.com/simonpham/htttsv-tdt-mobile");
+                Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+                startActivity(launchBrowser);
+            }
+        });
 
     }
 
