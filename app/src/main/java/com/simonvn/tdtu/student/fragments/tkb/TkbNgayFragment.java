@@ -3,6 +3,7 @@ package com.simonvn.tdtu.student.fragments.tkb;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -127,8 +128,10 @@ public class TkbNgayFragment extends Fragment implements View.OnClickListener ,
         super.onCreate(savedInstanceState);
         realm = Realm.getDefaultInstance();
         user = realm.where(User.class).findFirst();
-        userText = user.getUserName();
-        passText = user.getPassWord();
+        if (user != null) {
+            userText = user.getUserName();
+            passText = user.getPassWord();
+        }
 
     }
 
@@ -174,16 +177,18 @@ public class TkbNgayFragment extends Fragment implements View.OnClickListener ,
                 calendarToDay.get(Calendar.MONTH),
                 calendarToDay.get(Calendar.DAY_OF_MONTH)
         );
-        dpd.show(getActivity().getFragmentManager(), "Datepickerdialog");
+        try {
+            dpd.show(getActivity().getFragmentManager(), "Datepickerdialog");
+        } catch (Exception e) {
+            // nothing to do
+        }
     }
 
     private void checkOffline(){
         tkbItem = realm.where(TkbItem.class)
                 .equalTo("idHocKy", idHocky)
                 .findFirst();
-        if(tkbItem == null){
-
-        }else {
+        if (tkbItem != null){
             loadTkbOffline();
         }
     }

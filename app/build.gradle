@@ -4,7 +4,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
 
 def buildTimestamp() {
-    return System.currentTimeMillis()/1000;
+    return (System.currentTimeMillis()/1000).toInteger();
 }
 
 def buildTime() {
@@ -29,12 +29,12 @@ android {
         }
     }
     compileSdkVersion 27
-    buildToolsVersion '27.0.2'
+    buildToolsVersion '27.0.3'
     defaultConfig {
         applicationId "com.simonvn.tdtu.student"
-        minSdkVersion 21
+        minSdkVersion 19
         targetSdkVersion 27
-        versionCode 5
+        versionCode 6
         versionName '3.0'
         vectorDrawables.useSupportLibrary = true
         signingConfig signingConfigs.config

@@ -15,6 +15,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.google.android.gms.security.ProviderInstaller;
 import com.simonvn.tdtu.student.BuildConfig;
 import com.simonvn.tdtu.student.R;
 import com.simonvn.tdtu.student.Token;
@@ -33,6 +34,11 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import java.io.IOException;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
+
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLEngine;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
@@ -90,6 +96,7 @@ public class DangnhapActivity extends Activity implements View.OnClickListener{
         //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_dangnhap);
         anhXa();
+        checkTls();
         ServiceUtils.stopService(this, CheckEmailService.class);
         ServiceUtils.stopService(this, CheckNewsService.class);
     }
@@ -150,7 +157,6 @@ public class DangnhapActivity extends Activity implements View.OnClickListener{
         }
     }
 
-
     private void checkLogin(){
         waitProgress.show();
         runOnUiThread(new Runnable() {
@@ -159,6 +165,35 @@ public class DangnhapActivity extends Activity implements View.OnClickListener{
                 new readThongTinDanhNhap().execute("");
             }
         });
+    }
+
+    protected void checkTls() {
+        if (android.os.Build.VERSION.SDK_INT < 21) {
+            try {
+                ProviderInstaller.installIfNeededAsync(this, new ProviderInstaller.ProviderInstallListener() {
+                    @Override
+                    public void onProviderInstalled() {
+                        SSLContext sslContext = null;
+                        try {
+                            sslContext = SSLContext.getInstance("TLSv1.2");
+                            sslContext.init(null, null, null);
+                            SSLEngine engine = sslContext.createSSLEngine();
+                        } catch (NoSuchAlgorithmException e) {
+                            e.printStackTrace();
+                        } catch (KeyManagementException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+
+                    @Override
+                    public void onProviderInstallFailed(int i, Intent intent) {
+                    }
+                });
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public class readThongTinDanhNhap extends AsyncTask<String, Integer, Boolean>{
@@ -171,6 +206,8 @@ public class DangnhapActivity extends Activity implements View.OnClickListener{
                         .data("token", Token.getToken(textUserGet, textPasswordGet))
                         .data("act", "avatar")
                         .timeout(30000)
+                        .ignoreHttpErrors(true)
+                        .validateTLSCertificates(false)
                         .get();
                 JSONObject root = new JSONObject(doc.text());
                 if(root.has("status")){
@@ -188,6 +225,7 @@ public class DangnhapActivity extends Activity implements View.OnClickListener{
                 return false;
             } catch (IOException e) {
                 // android 4.4 problem
+                e.printStackTrace();
                 return false;
             } catch (JSONException e) {
                 return false;
@@ -227,7 +265,7 @@ public class DangnhapActivity extends Activity implements View.OnClickListener{
                 startActivity(trangChu);
                 finish();
 
-            }else {
+            } else {
                 inputLayoutPassword.setError(getResources().getString(R.string.mess_error_login));
             }
             waitProgress.hide();
