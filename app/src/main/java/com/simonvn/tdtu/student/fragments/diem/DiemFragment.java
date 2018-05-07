@@ -57,7 +57,7 @@ public class DiemFragment extends Fragment {
     }
     private void anhXa(){
         khoiTao();
-        recyclerView = (RecyclerView) inflatedView.findViewById(R.id.recyclerview);
+        recyclerView = inflatedView.findViewById(R.id.recyclerview);
         adapter = new DiemRecyclerViewAdapter(list);
         manager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         manager.setSpanCount(1);
@@ -65,7 +65,7 @@ public class DiemFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(adapter);
 
-        swipeContainer = (SwipeRefreshLayout) inflatedView.findViewById(R.id.swipeContainer);
+        swipeContainer = inflatedView.findViewById(R.id.swipeContainer);
         swipeContainer.setColorSchemeResources(R.color.colorAccent);
     }
     public DiemFragment() {

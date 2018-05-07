@@ -53,11 +53,11 @@ public class ThongbaoWebviewActivity extends AppCompatActivity {
     }
     private void anhXa(){
         khoiTao();
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
 
-        webView = (WebView) findViewById(R.id.webview);
+        webView = findViewById(R.id.webview);
         webView.getSettings().setAppCacheMaxSize( 5 * 1024 * 1024 );
         webView.getSettings().setAppCachePath( getApplicationContext().getCacheDir().getAbsolutePath());
         webView.getSettings().setAllowFileAccess( true );
@@ -67,7 +67,7 @@ public class ThongbaoWebviewActivity extends AppCompatActivity {
         webView.getSettings().setBuiltInZoomControls(true);
         webView.getSettings().setDisplayZoomControls(false);
 
-        mMultiStateView = (MultiStateView) findViewById(R.id.multiStateView);
+        mMultiStateView = findViewById(R.id.multiStateView);
         mMultiStateView.getView(MultiStateView.VIEW_STATE_ERROR).findViewById(R.id.retry).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,14 +75,14 @@ public class ThongbaoWebviewActivity extends AppCompatActivity {
             }
         });
 
-        btnBack = (AppCompatImageButton) findViewById(R.id.btnBack);
+        btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
         });
-        btnReload = (AppCompatImageButton) findViewById(R.id.btnReload);
+        btnReload = findViewById(R.id.btnReload);
         btnReload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

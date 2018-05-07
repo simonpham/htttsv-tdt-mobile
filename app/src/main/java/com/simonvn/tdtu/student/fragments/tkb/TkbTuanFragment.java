@@ -72,7 +72,7 @@ public class TkbTuanFragment extends Fragment {
 
     private void anhXa(){
         khoiTao();
-        rvTuan = (RecyclerView) inflatedView.findViewById(R.id.rvTuan);
+        rvTuan = inflatedView.findViewById(R.id.rvTuan);
         tkbTuanTileAdapter = new TkbTuanTileAdapter(getActivity());
         tkbTuanManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.HORIZONTAL);
         tkbTuanManager.setSpanCount(1);
@@ -80,7 +80,7 @@ public class TkbTuanFragment extends Fragment {
         rvTuan.setHasFixedSize(true);
         rvTuan.setAdapter(tkbTuanTileAdapter);
 
-        recyclerView = (RecyclerView) inflatedView.findViewById(R.id.recyclerview);
+        recyclerView = inflatedView.findViewById(R.id.recyclerview);
         adapter = new TkbTonghopRecyclerViewAdapter(list);
         manager = new TopSnappedStickyLayoutManager(inflatedView.getContext(), adapter);
         manager.elevateHeaders(1);

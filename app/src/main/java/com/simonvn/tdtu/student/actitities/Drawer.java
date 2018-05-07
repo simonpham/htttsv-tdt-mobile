@@ -128,14 +128,14 @@ public class Drawer extends AppCompatActivity
         nameText = user.getName();
         avatarText = user.getLinkAvatar();
 
-        layoutUpdate = (LinearLayout) findViewById(R.id.layoutUpdate);
-        tvTileUpdate = (TextView) findViewById(R.id.tvTitleUpdate);
-        logUpdate = (WebView) findViewById(R.id.logUpdate);
-        btnUpdate = (Button) findViewById(R.id.btnDownloadUpdate);
+        layoutUpdate = findViewById(R.id.layoutUpdate);
+        tvTileUpdate = findViewById(R.id.tvTitleUpdate);
+        logUpdate = findViewById(R.id.logUpdate);
+        btnUpdate = findViewById(R.id.btnDownloadUpdate);
 
-        layoutNews = (LinearLayout) findViewById(R.id.layoutNews);
-        tvTileNews = (TextView) findViewById(R.id.tvTitleNews);
-        logNews = (WebView) findViewById(R.id.logNews);
+        layoutNews = findViewById(R.id.layoutNews);
+        tvTileNews = findViewById(R.id.tvTitleNews);
+        logNews = findViewById(R.id.logNews);
 
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -146,17 +146,17 @@ public class Drawer extends AppCompatActivity
         khoiTao();
 
 
-        name = (TextView) findViewById(R.id.name_text);
-        massv = (TextView) findViewById(R.id.mssv_text);
+        name = findViewById(R.id.name_text);
+        massv = findViewById(R.id.mssv_text);
 
 
         name.setText(nameText);
         massv.setText(userText);
 
 
-        snowingView = (SnowingView) findViewById(R.id.snowing_view);
+        snowingView = findViewById(R.id.snowing_view);
 
-        btnLogout = (Button) findViewById(R.id.btnLogout);
+        btnLogout = findViewById(R.id.btnLogout);
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -171,7 +171,7 @@ public class Drawer extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawer);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         SharedPreferences prefs = this.getSharedPreferences("com.simonvn.tdt.student", Context.MODE_PRIVATE);
@@ -221,13 +221,13 @@ public class Drawer extends AppCompatActivity
                 })
                 .run();
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         userReference = mDatabase.child("UserOnline");
@@ -416,7 +416,7 @@ public class Drawer extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -511,7 +511,7 @@ public class Drawer extends AppCompatActivity
             logOut();
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

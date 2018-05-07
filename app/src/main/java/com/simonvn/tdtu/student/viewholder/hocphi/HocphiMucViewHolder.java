@@ -16,8 +16,8 @@ public class HocphiMucViewHolder extends RecyclerView.ViewHolder {
     public HocphiMucViewHolder(View itemView) {
         super(itemView);
 
-        title = (TextView) itemView.findViewById(R.id.ten_text);
-        money = (TextView) itemView.findViewById(R.id.money_text);
+        title = itemView.findViewById(R.id.ten_text);
+        money = itemView.findViewById(R.id.money_text);
         //dot = (TextView) itemView.findViewById(R.id.dot);
     }
 }

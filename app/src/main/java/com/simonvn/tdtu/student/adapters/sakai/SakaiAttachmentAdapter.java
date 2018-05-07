@@ -65,8 +65,8 @@ public class SakaiAttachmentAdapter extends RecyclerView.Adapter {
 
         public SakaiAttachmentViewHolder(View itemView) {
             super(itemView);
-            tvName = (TextView) itemView.findViewById(R.id.tvName);
-            layout = (MaterialRippleLayout) itemView.findViewById(R.id.layout);
+            tvName = itemView.findViewById(R.id.tvName);
+            layout = itemView.findViewById(R.id.layout);
         }
     }
 

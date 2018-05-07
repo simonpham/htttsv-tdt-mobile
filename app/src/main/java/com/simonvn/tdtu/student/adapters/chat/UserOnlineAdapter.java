@@ -68,7 +68,7 @@ public class UserOnlineAdapter extends RecyclerView.Adapter{
         public TextView tvMSSV;
         public UserOnlineViewHolder(View itemView) {
             super(itemView);
-            tvMSSV = (TextView) itemView.findViewById(R.id.tvMSSV);
+            tvMSSV = itemView.findViewById(R.id.tvMSSV);
         }
     }
 }

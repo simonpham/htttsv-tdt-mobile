@@ -13,8 +13,8 @@ public class HocphiChitietViewHolder extends RecyclerView.ViewHolder {
     public TextView line, title, id, money;
     public HocphiChitietViewHolder(View itemView) {
         super(itemView);
-        id = (TextView) itemView.findViewById(R.id.id_lable);
-        title = (TextView) itemView.findViewById(R.id.ten_text);
-        money = (TextView) itemView.findViewById(R.id.money_text);
+        id = itemView.findViewById(R.id.id_lable);
+        title = itemView.findViewById(R.id.ten_text);
+        money = itemView.findViewById(R.id.money_text);
     }
 }

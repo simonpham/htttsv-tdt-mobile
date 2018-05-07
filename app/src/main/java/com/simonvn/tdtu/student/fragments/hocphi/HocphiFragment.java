@@ -62,7 +62,7 @@ public class HocphiFragment extends Fragment {
     }
     private void anhXa(){
         khoiTao();
-        recyclerView = (RecyclerView) inflatedView.findViewById(R.id.recyclerview);
+        recyclerView = inflatedView.findViewById(R.id.recyclerview);
         adapter = new HocphiRecyclerViewAdapter(list);
         manager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         manager.setSpanCount(1);
@@ -70,9 +70,9 @@ public class HocphiFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(adapter);
 
-        swipeContainer = (SwipeRefreshLayout) inflatedView.findViewById(R.id.swipeContainer);
+        swipeContainer = inflatedView.findViewById(R.id.swipeContainer);
 
-        mMultiStateView = (MultiStateView) inflatedView.findViewById(R.id.multiStateView);
+        mMultiStateView = inflatedView.findViewById(R.id.multiStateView);
         mMultiStateView.getView(MultiStateView.VIEW_STATE_ERROR).findViewById(R.id.retry).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

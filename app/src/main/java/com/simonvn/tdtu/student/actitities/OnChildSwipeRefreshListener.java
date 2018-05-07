@@ -5,5 +5,5 @@ package com.simonvn.tdtu.student.actitities;
  */
 
 public interface OnChildSwipeRefreshListener {
-    public void onChildSwipeRefreshListener();
+    void onChildSwipeRefreshListener();
 }

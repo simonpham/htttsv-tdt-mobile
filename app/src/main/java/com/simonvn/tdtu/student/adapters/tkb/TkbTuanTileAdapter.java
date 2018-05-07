@@ -92,9 +92,9 @@ public class TkbTuanTileAdapter extends RecyclerView.Adapter {
         public MaterialRippleLayout layout;
         public TkbTuanTileViewHolder(View itemView) {
             super(itemView);
-            tvTitle = (TextView) itemView.findViewById(R.id.tvTile);
-            tvDate = (TextView) itemView.findViewById(R.id.tvDate);
-            layout = (MaterialRippleLayout) itemView.findViewById(R.id.layout);
+            tvTitle = itemView.findViewById(R.id.tvTile);
+            tvDate = itemView.findViewById(R.id.tvDate);
+            layout = itemView.findViewById(R.id.layout);
             layout.setOnClickListener(this);
         }
 

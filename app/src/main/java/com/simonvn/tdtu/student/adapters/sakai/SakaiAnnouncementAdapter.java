@@ -82,11 +82,11 @@ public class SakaiAnnouncementAdapter extends RecyclerView.Adapter {
 
         public SakaiAnnouncementViewHolder(View itemView) {
             super(itemView);
-            tvCreatedByDisplayName = (TextView) itemView.findViewById(R.id.tvCreatedByDisplayName);
-            tvTile = (TextView) itemView.findViewById(R.id.tvTile);
-            imgAttachment = (ImageView) itemView.findViewById(R.id.imgAttachment);
-            tvCreatedOn = (RelativeTimeTextView) itemView.findViewById(R.id.tvCreatedOn);
-            layout = (MaterialRippleLayout) itemView.findViewById(R.id.layout);
+            tvCreatedByDisplayName = itemView.findViewById(R.id.tvCreatedByDisplayName);
+            tvTile = itemView.findViewById(R.id.tvTile);
+            imgAttachment = itemView.findViewById(R.id.imgAttachment);
+            tvCreatedOn = itemView.findViewById(R.id.tvCreatedOn);
+            layout = itemView.findViewById(R.id.layout);
         }
     }
 

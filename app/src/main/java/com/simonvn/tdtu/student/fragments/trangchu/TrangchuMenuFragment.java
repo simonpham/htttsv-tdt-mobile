@@ -47,7 +47,7 @@ public class TrangchuMenuFragment extends Fragment{
             column = 3;
         }
 
-        recyclerView = (RecyclerView) inflatedView.findViewById(R.id.recyclerview);
+        recyclerView = inflatedView.findViewById(R.id.recyclerview);
         adapter = new TrangchuMenuRecyclerViewAdapter(inflatedView.getContext(), lists);
         manager = new StaggeredGridLayoutManager(column, StaggeredGridLayoutManager.VERTICAL);
         manager.setSpanCount(column);

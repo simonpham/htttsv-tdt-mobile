@@ -13,7 +13,7 @@ public class HocphiHeaderViewHolder extends RecyclerView.ViewHolder {
     public TextView title, date;
     public HocphiHeaderViewHolder(View itemView) {
         super(itemView);
-        title = (TextView) itemView.findViewById(R.id.money_text);
-        date = (TextView) itemView.findViewById(R.id.date_text);
+        title = itemView.findViewById(R.id.money_text);
+        date = itemView.findViewById(R.id.date_text);
     }
 }

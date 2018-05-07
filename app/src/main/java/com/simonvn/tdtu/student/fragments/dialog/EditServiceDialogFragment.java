@@ -62,15 +62,15 @@ public class EditServiceDialogFragment extends DialogFragment {
         realm = Realm.getDefaultInstance();
         user = realm.where(User.class).findFirst();
 
-        rdgTime = (RadioGroup) view.findViewById(R.id.rdgTime);
-        rbTime0 = (RadioButton) view.findViewById(R.id.rbTime0);
+        rdgTime = view.findViewById(R.id.rdgTime);
+        rbTime0 = view.findViewById(R.id.rbTime0);
         rbTime0.setChecked(true);
-        rbTime1 = (RadioButton) view.findViewById(R.id.rbTime1);
-        rbTime2 = (RadioButton) view.findViewById(R.id.rbTime2);
-        rbTime3 = (RadioButton) view.findViewById(R.id.rbTime3);
-        rbTime4 = (RadioButton) view.findViewById(R.id.rbTime4);
-        chbSound = (CheckBox) view.findViewById(R.id.chbSound);
-        chbVibrate = (CheckBox) view.findViewById(R.id.chbVibrate);
+        rbTime1 = view.findViewById(R.id.rbTime1);
+        rbTime2 = view.findViewById(R.id.rbTime2);
+        rbTime3 = view.findViewById(R.id.rbTime3);
+        rbTime4 = view.findViewById(R.id.rbTime4);
+        chbSound = view.findViewById(R.id.chbSound);
+        chbVibrate = view.findViewById(R.id.chbVibrate);
 
         switch (type){
             case TYPE_EMAIL:
@@ -85,7 +85,7 @@ public class EditServiceDialogFragment extends DialogFragment {
                 break;
         }
 
-        btnSave = (Button) view.findViewById(R.id.btnSave);
+        btnSave = view.findViewById(R.id.btnSave);
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

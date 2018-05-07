@@ -64,13 +64,13 @@ public class DiemRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.V
         public TextView monHoc, diem1, diem2, diemthi1, diemthi2, dtb, ghiCHu;
         public DiemViewHolder(View itemView) {
             super(itemView);
-            monHoc = (TextView) itemView.findViewById(R.id.monhoc_text);
-            diem1 = (TextView) itemView.findViewById(R.id.diem1_text);
-            diem2 = (TextView) itemView.findViewById(R.id.diem2_text);
-            diemthi1 = (TextView) itemView.findViewById(R.id.diemthi1_text);
-            diemthi2 = (TextView) itemView.findViewById(R.id.diemthi2_text);
-            ghiCHu = (TextView) itemView.findViewById(R.id.ghichu_text);
-            dtb = (TextView) itemView.findViewById(R.id.dtb_text);
+            monHoc = itemView.findViewById(R.id.monhoc_text);
+            diem1 = itemView.findViewById(R.id.diem1_text);
+            diem2 = itemView.findViewById(R.id.diem2_text);
+            diemthi1 = itemView.findViewById(R.id.diemthi1_text);
+            diemthi2 = itemView.findViewById(R.id.diemthi2_text);
+            ghiCHu = itemView.findViewById(R.id.ghichu_text);
+            dtb = itemView.findViewById(R.id.dtb_text);
         }
     }
 }

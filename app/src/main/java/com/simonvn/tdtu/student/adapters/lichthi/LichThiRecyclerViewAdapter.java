@@ -116,8 +116,8 @@ public class LichThiRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
         public TextView day, date;
         public DateViewHolder(View itemView) {
             super(itemView);
-            day = (TextView) itemView.findViewById(R.id.tvDay);
-            date = (TextView) itemView.findViewById(R.id.tvDate);
+            day = itemView.findViewById(R.id.tvDay);
+            date = itemView.findViewById(R.id.tvDate);
         }
     }
 
@@ -127,15 +127,15 @@ public class LichThiRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVie
         public ExpandableLinearLayout expandableLayout;
         public LichThiViewHolder(View itemView) {
             super(itemView);
-            timeStart = (TextView) itemView.findViewById(R.id.time_start_text);
-            timeFinish = (TextView) itemView.findViewById(R.id.time_finish_text);
-            tenMH = (TextView) itemView.findViewById(R.id.tenMH_text);
-            maMH = (TextView) itemView.findViewById(R.id.maMH_text);
-            nhom = (TextView) itemView.findViewById(R.id.nhom_text);
-            to = (TextView) itemView.findViewById(R.id.to_text);
-            phong = (TextView) itemView.findViewById(R.id.phong_text);
-            layout = (MaterialRippleLayout) itemView.findViewById(R.id.layout);
-            expandableLayout = (ExpandableLinearLayout) itemView.findViewById(R.id.expandableLayout);
+            timeStart = itemView.findViewById(R.id.time_start_text);
+            timeFinish = itemView.findViewById(R.id.time_finish_text);
+            tenMH = itemView.findViewById(R.id.tenMH_text);
+            maMH = itemView.findViewById(R.id.maMH_text);
+            nhom = itemView.findViewById(R.id.nhom_text);
+            to = itemView.findViewById(R.id.to_text);
+            phong = itemView.findViewById(R.id.phong_text);
+            layout = itemView.findViewById(R.id.layout);
+            expandableLayout = itemView.findViewById(R.id.expandableLayout);
             expandableLayout.setInRecyclerView(true);
         }
     }

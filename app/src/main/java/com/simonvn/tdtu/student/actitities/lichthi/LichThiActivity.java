@@ -85,17 +85,17 @@ public class LichThiActivity extends AppCompatActivity implements OnChildSwipeRe
     }
     private void anhXa(){
         khoiTao();
-        viewPager = (ViewPager) findViewById(R.id.viewpaper);
+        viewPager = findViewById(R.id.viewpaper);
         viewPager.setAdapter(fragmentAdapter);
 
-        tabs = (PagerSlidingTabStrip) findViewById(R.id.tabs);
+        tabs = findViewById(R.id.tabs);
         tabs.setViewPager(viewPager);
         tabs.setVisibility(View.GONE);
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
 
-        mMultiStateView = (MultiStateView) findViewById(R.id.multiStateView);
+        mMultiStateView = findViewById(R.id.multiStateView);
         mMultiStateView.getView(MultiStateView.VIEW_STATE_ERROR).findViewById(R.id.retry).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -103,21 +103,21 @@ public class LichThiActivity extends AppCompatActivity implements OnChildSwipeRe
             }
         });
 
-        btnBack = (AppCompatImageButton) findViewById(R.id.btnBack);
+        btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
         });
-        btnReload = (AppCompatImageButton) findViewById(R.id.btnReload);
+        btnReload = findViewById(R.id.btnReload);
         btnReload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 reload();
             }
         });
-        btnDefault = (AppCompatImageButton) findViewById(R.id.btnDefault);
+        btnDefault = findViewById(R.id.btnDefault);
         btnDefault.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -125,7 +125,7 @@ public class LichThiActivity extends AppCompatActivity implements OnChildSwipeRe
             }
         });
 
-        btnChonHocKy = (MaterialRippleLayout) findViewById(R.id.btnChonHocKy);
+        btnChonHocKy = findViewById(R.id.btnChonHocKy);
         btnChonHocKy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -139,7 +139,7 @@ public class LichThiActivity extends AppCompatActivity implements OnChildSwipeRe
             }
         });
 
-        tvTiteHocKy = (TextView)findViewById(R.id.tvHocKy);
+        tvTiteHocKy = findViewById(R.id.tvHocKy);
     }
 
     @Override

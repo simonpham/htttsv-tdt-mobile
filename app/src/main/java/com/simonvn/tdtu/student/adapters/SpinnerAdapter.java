@@ -59,7 +59,7 @@ public class SpinnerAdapter extends BaseAdapter {
             view.setTag("DROPDOWN");
         }
 
-        TextView textView = (TextView) view.findViewById(android.R.id.text1);
+        TextView textView = view.findViewById(android.R.id.text1);
         textView.setText(getTitle(position));
 
         return view;
@@ -72,7 +72,7 @@ public class SpinnerAdapter extends BaseAdapter {
                     toolbar_spinner_item_actionbar, parent, false);
             view.setTag("NON_DROPDOWN");
         }
-        TextView textView = (TextView) view.findViewById(android.R.id.text1);
+        TextView textView = view.findViewById(android.R.id.text1);
         textView.setText(getTitle(position));
         return view;
     }

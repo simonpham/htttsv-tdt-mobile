@@ -168,7 +168,7 @@ public class EmailNewActivity extends AppCompatActivity implements ColorPickerDi
     private void anhXa(){
         khoiTao();
 
-        edtTo = (AutoCompleteTextView) findViewById(R.id.edtTo);
+        edtTo = findViewById(R.id.edtTo);
         edtTo.setAdapter(new ArrayAdapter<String>(  this,
                 android.R.layout.simple_list_item_1,
                 emailAddress));
@@ -177,33 +177,33 @@ public class EmailNewActivity extends AppCompatActivity implements ColorPickerDi
             edtTo.setVisibility(View.GONE);
         }
 
-        edtSubject = (EditText) findViewById(R.id.edtSubject);
+        edtSubject = findViewById(R.id.edtSubject);
 
         edtTo.setText(to);
         edtSubject.setText(subject);
 
 
-        attRv = (RecyclerView) findViewById(R.id.rvAttachment);
+        attRv = findViewById(R.id.rvAttachment);
         attAdapter = new EmailAttchmentNewAdapter();
         attRv.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         attRv.setAdapter(attAdapter);
         attRv.setNestedScrollingEnabled(false);
 
-        btnBack = (AppCompatImageButton) findViewById(R.id.btnBack);
+        btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
         });
-        btnSend = (AppCompatImageButton) findViewById(R.id.btnSend);
+        btnSend = findViewById(R.id.btnSend);
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 checkBeforeSend();
             }
         });
-        btnAttchment = (AppCompatImageButton) findViewById(R.id.btnAttachment);
+        btnAttchment = findViewById(R.id.btnAttachment);
         btnAttchment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

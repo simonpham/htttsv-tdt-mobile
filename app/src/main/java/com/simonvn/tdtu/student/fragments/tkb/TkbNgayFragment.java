@@ -76,7 +76,7 @@ public class TkbNgayFragment extends Fragment implements View.OnClickListener ,
     }
     private void anhXa(){
         khoiTao();
-        recyclerView = (RecyclerView) inflatedView.findViewById(R.id.recyclerview);
+        recyclerView = inflatedView.findViewById(R.id.recyclerview);
         adapter = new TkbNgayRecyclerViewAdapter(list);
         manager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         manager.setSpanCount(1);
@@ -84,19 +84,19 @@ public class TkbNgayFragment extends Fragment implements View.OnClickListener ,
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(adapter);
 
-        mMultiStateView = (MultiStateView) inflatedView.findViewById(R.id.multiStateView);
+        mMultiStateView = inflatedView.findViewById(R.id.multiStateView);
 
-        btnDayBefore = (ImageButton) inflatedView.findViewById(R.id.btnDayBefore);
+        btnDayBefore = inflatedView.findViewById(R.id.btnDayBefore);
         btnDayBefore.setOnClickListener(this);
-        btnDayNext = (ImageButton) inflatedView.findViewById(R.id.btnDayNext);
+        btnDayNext = inflatedView.findViewById(R.id.btnDayNext);
         btnDayNext.setOnClickListener(this);
 
-        tvDateSelected = (TextView) inflatedView.findViewById(R.id.tvDateSelected);
+        tvDateSelected = inflatedView.findViewById(R.id.tvDateSelected);
         tvDateSelected.setOnClickListener(this);
-        tvDaySelected = (TextView) inflatedView.findViewById(R.id.tvDaySelected);
+        tvDaySelected = inflatedView.findViewById(R.id.tvDaySelected);
         tvDaySelected.setOnClickListener(this);
 
-        swipeContainer = (SwipeRefreshLayout) inflatedView.findViewById(R.id.swipeContainer);
+        swipeContainer = inflatedView.findViewById(R.id.swipeContainer);
         swipeContainer.setColorSchemeResources(R.color.colorAccent);
 
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {

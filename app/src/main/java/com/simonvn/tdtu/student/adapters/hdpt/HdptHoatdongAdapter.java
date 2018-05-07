@@ -51,9 +51,9 @@ public class HdptHoatdongAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         public RoundedLetterView diem;
         public HdptHoatdongViewHolder(View itemView) {
             super(itemView);
-            noiDung = (TextView) itemView.findViewById(R.id.noidung_text);
-            thoiGian = (TextView) itemView.findViewById(R.id.thoigian_text);
-            diem = (RoundedLetterView) itemView.findViewById(R.id.diem_text);
+            noiDung = itemView.findViewById(R.id.noidung_text);
+            thoiGian = itemView.findViewById(R.id.thoigian_text);
+            diem = itemView.findViewById(R.id.diem_text);
         }
     }
 }

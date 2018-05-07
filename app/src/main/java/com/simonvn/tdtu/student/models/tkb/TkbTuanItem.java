@@ -33,7 +33,7 @@ public class TkbTuanItem {
 
     public void setNgayBatDau(Calendar ngayBatDau) {
         this.ngayBatDau = (Calendar) ngayBatDau.clone();
-        this.ngayKetThuc = (Calendar) ngayBatDau.clone();;
+        this.ngayKetThuc = (Calendar) ngayBatDau.clone();
         ngayKetThuc.add(Calendar.DAY_OF_YEAR, 7);
     }
 

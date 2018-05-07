@@ -64,16 +64,16 @@ public class DangnhapActivity extends Activity implements View.OnClickListener{
     }
     private void anhXa(){
         khoiTao();
-        btnDangNhap = (Button)findViewById(R.id.button_dangnhap);
+        btnDangNhap = findViewById(R.id.button_dangnhap);
         btnDangNhap.setOnClickListener(this);
-        tvUsername = (EditText) findViewById(R.id.tvUsername);
-        tvPassword = (EditText) findViewById(R.id.tvPassword);
+        tvUsername = findViewById(R.id.tvUsername);
+        tvPassword = findViewById(R.id.tvPassword);
 
-        tvVersion = (TextView) findViewById(R.id.tvVersion);
+        tvVersion = findViewById(R.id.tvVersion);
         tvVersion.setText(BuildConfig.VERSION_NAME);
 
-        inputLayoutName = (TextInputLayout) findViewById(R.id.input_layout_name);
-        inputLayoutPassword = (TextInputLayout) findViewById(R.id.input_layout_password);
+        inputLayoutName = findViewById(R.id.input_layout_name);
+        inputLayoutPassword = findViewById(R.id.input_layout_password);
 
         tvPassword.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -84,9 +84,9 @@ public class DangnhapActivity extends Activity implements View.OnClickListener{
                 return false;
             }
         });
-        waitProgress = (MaterialSquareLoading) findViewById(R.id.progressBar);
+        waitProgress = findViewById(R.id.progressBar);
         waitProgress.hide();
-        ibtnHideShowPass = (ImageButton) findViewById(R.id.hide_show_pass);
+        ibtnHideShowPass = findViewById(R.id.hide_show_pass);
         ibtnHideShowPass.setOnClickListener(this);
         hideShowPass();
     }
@@ -121,7 +121,7 @@ public class DangnhapActivity extends Activity implements View.OnClickListener{
             isShowPass = false;
             start = tvPassword.getSelectionStart();
             end = tvPassword.getSelectionEnd();
-            tvPassword.setTransformationMethod(new PasswordTransformationMethod());;
+            tvPassword.setTransformationMethod(new PasswordTransformationMethod());
             tvPassword.setSelection(start,end);
         }else {
             ibtnHideShowPass.setImageResource(R.drawable.ic_eye_off);

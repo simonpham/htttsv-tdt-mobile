@@ -132,7 +132,7 @@ public class TkbTonghopRecyclerViewAdapter extends RecyclerView.Adapter<Recycler
         public TextView thu;
         public ThuViewHolder(View itemView) {
             super(itemView);
-            thu = (TextView) itemView.findViewById(R.id.thu_text);
+            thu = itemView.findViewById(R.id.thu_text);
         }
     }
 
@@ -142,18 +142,18 @@ public class TkbTonghopRecyclerViewAdapter extends RecyclerView.Adapter<Recycler
         public MaterialRippleLayout layout;
         public MonhocViewHolder(View itemView) {
             super(itemView);
-            pos = (TextView) itemView.findViewById(R.id.pos_text);
-            timeStart = (TextView) itemView.findViewById(R.id.time_start_text);
-            timeFinish = (TextView) itemView.findViewById(R.id.time_finish_text);
-            tenMH = (TextView) itemView.findViewById(R.id.tenMH_text);
-            maMH = (TextView) itemView.findViewById(R.id.maMH_text);
-            nhom = (TextView) itemView.findViewById(R.id.nhom_text);
-            to = (TextView) itemView.findViewById(R.id.to_text);
-            phong = (TextView) itemView.findViewById(R.id.phong_text);
-            tuan = (TextView) itemView.findViewById(R.id.tuan_text);
-            expandableLayout = (ExpandableLinearLayout) itemView.findViewById(R.id.expandableLayout);
+            pos = itemView.findViewById(R.id.pos_text);
+            timeStart = itemView.findViewById(R.id.time_start_text);
+            timeFinish = itemView.findViewById(R.id.time_finish_text);
+            tenMH = itemView.findViewById(R.id.tenMH_text);
+            maMH = itemView.findViewById(R.id.maMH_text);
+            nhom = itemView.findViewById(R.id.nhom_text);
+            to = itemView.findViewById(R.id.to_text);
+            phong = itemView.findViewById(R.id.phong_text);
+            tuan = itemView.findViewById(R.id.tuan_text);
+            expandableLayout = itemView.findViewById(R.id.expandableLayout);
             expandableLayout.setInRecyclerView(true);
-            layout = (MaterialRippleLayout) itemView.findViewById(R.id.layout);
+            layout = itemView.findViewById(R.id.layout);
         }
     }
 }

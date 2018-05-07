@@ -56,7 +56,7 @@ public class HdptHoatdongFragment extends Fragment {
     }
     private void anhXa(){
         khoiTao();
-        recyclerView = (RecyclerView) inflatedView.findViewById(R.id.recyclerview);
+        recyclerView = inflatedView.findViewById(R.id.recyclerview);
         adapter = new HdptHoatdongAdapter(list);
         manager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         manager.setSpanCount(1);
@@ -64,7 +64,7 @@ public class HdptHoatdongFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(adapter);
 
-        swipeContainer = (SwipeRefreshLayout) inflatedView.findViewById(R.id.swipeContainer);
+        swipeContainer = inflatedView.findViewById(R.id.swipeContainer);
         swipeContainer.setColorSchemeResources(R.color.colorAccent);
 
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {

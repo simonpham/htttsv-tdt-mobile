@@ -97,7 +97,7 @@ public class HdptDanhgiaAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         public TextView title;
         public HdptDanhgiaTitleViewHolder(View itemView) {
             super(itemView);
-            title = (TextView) itemView.findViewById(R.id.title_text);
+            title = itemView.findViewById(R.id.title_text);
         }
     }
     public class HdptDanhgiaViewHolder extends RecyclerView.ViewHolder{
@@ -105,9 +105,9 @@ public class HdptDanhgiaAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         public RoundedLetterView diem;
         public HdptDanhgiaViewHolder(View itemView) {
             super(itemView);
-            diem = (RoundedLetterView) itemView.findViewById(R.id.diem_text);
-            noiDung = (TextView) itemView.findViewById(R.id.noidung_text);
-            ketQua = (TextView) itemView.findViewById(R.id.ketqua_text);
+            diem = itemView.findViewById(R.id.diem_text);
+            noiDung = itemView.findViewById(R.id.noidung_text);
+            ketQua = itemView.findViewById(R.id.ketqua_text);
         }
     }
 
@@ -115,7 +115,7 @@ public class HdptDanhgiaAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         public TextView diem;
         public HdptDanhgiaDiemViewHolder(View itemView) {
             super(itemView);
-            diem = (TextView) itemView.findViewById(R.id.diem_text);
+            diem = itemView.findViewById(R.id.diem_text);
         }
     }
 }

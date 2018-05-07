@@ -384,10 +384,7 @@ public class SnowingView extends View implements SensorEventListener {
       return true;
     }
 
-    if (y > mHeight + mSnowFlakeBitmap.getHeight()) {
-      return true;
-    }
+      return y > mHeight + mSnowFlakeBitmap.getHeight();
 
-    return false;
   }
 }

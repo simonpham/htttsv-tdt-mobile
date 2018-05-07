@@ -32,7 +32,7 @@ public class TrangchuMenuRecyclerViewAdapter extends RecyclerView.Adapter<Recycl
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.item_trangchu_menu, parent, false);;
+        View view = inflater.inflate(R.layout.item_trangchu_menu, parent, false);
         RecyclerView.ViewHolder viewHolder = new TrangchuMenuViewHolder(view);
         return viewHolder;
     }
@@ -63,10 +63,10 @@ public class TrangchuMenuRecyclerViewAdapter extends RecyclerView.Adapter<Recycl
         private LinearLayout bg;
         public TrangchuMenuViewHolder(View itemView) {
             super(itemView);
-            title = (TextView) itemView.findViewById(R.id.title_text);
-            icon = (ImageView) itemView.findViewById(R.id.icon_img);
-            bg = (LinearLayout) itemView.findViewById(R.id.bg);
-            layout = (MaterialRippleLayout) itemView.findViewById(R.id.layout);
+            title = itemView.findViewById(R.id.title_text);
+            icon = itemView.findViewById(R.id.icon_img);
+            bg = itemView.findViewById(R.id.bg);
+            layout = itemView.findViewById(R.id.layout);
             layout.setOnClickListener(this);
             layout.setOnLongClickListener(this);
             title.setTextSize(12);

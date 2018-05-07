@@ -76,7 +76,7 @@ public class ThongbaoRecyclerViewAdapter extends RecyclerView.Adapter implements
         public TextView tvDate;
         public ThongBaoDateViewHolder(View itemView) {
             super(itemView);
-            tvDate = (TextView) itemView.findViewById(R.id.tvDate);
+            tvDate = itemView.findViewById(R.id.tvDate);
         }
     }
 
@@ -85,8 +85,8 @@ public class ThongbaoRecyclerViewAdapter extends RecyclerView.Adapter implements
         TextView title;
         public ThongBaoViewHolder(View itemView) {
             super(itemView);
-            layout = (MaterialRippleLayout) itemView.findViewById(R.id.thongbao_layout);
-            title = (TextView) itemView.findViewById(R.id.title_text);
+            layout = itemView.findViewById(R.id.thongbao_layout);
+            title = itemView.findViewById(R.id.title_text);
             layout.setOnClickListener(this);
         }
         @Override

@@ -48,9 +48,7 @@ public class StringUtil {
     public static boolean isThongBaoMoi(String thongBao){
         int ngoatFn = thongBao.lastIndexOf(")");
         String moi  = thongBao.substring(ngoatFn);
-        if(moi.indexOf("Mới") > 0)
-            return true;
-        return false;
+        return moi.indexOf("Mới") > 0;
     }
 
     /*public static String tinhTGBatDau(String a){

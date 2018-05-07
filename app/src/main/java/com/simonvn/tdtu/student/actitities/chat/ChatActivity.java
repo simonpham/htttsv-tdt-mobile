@@ -83,10 +83,10 @@ public class ChatActivity extends AppCompatActivity {
         showAvatar = user.isShowAvatar();
 
 
-        swAvatar = (RMSwitch) findViewById(R.id.swAvatar);
+        swAvatar = findViewById(R.id.swAvatar);
         swAvatar.setChecked(user.isShowAvatar());
 
-        rvUserOnline = (RecyclerView) findViewById(R.id.rvUserOnline);
+        rvUserOnline = findViewById(R.id.rvUserOnline);
         userOnlineAdapter = new UserOnlineAdapter();
         userOnlineManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.HORIZONTAL);
         userOnlineManager.setSpanCount(1);
@@ -95,13 +95,13 @@ public class ChatActivity extends AppCompatActivity {
         rvUserOnline.setAdapter(userOnlineAdapter);
 
 
-        mMessageRecycler = (RecyclerView) findViewById(R.id.reyclerview_message_list);
+        mMessageRecycler = findViewById(R.id.reyclerview_message_list);
         mMessageAdapter = new ChatAdapter(this);
         mMessageRecycler.setLayoutManager(new LinearLayoutManager(this));
         mMessageRecycler.setAdapter(mMessageAdapter);
 
-        edtChat = (EditText) findViewById(R.id.edittext_chatbox);
-        btnChat = (AppCompatImageButton) findViewById(R.id.button_chatbox_send);
+        edtChat = findViewById(R.id.edittext_chatbox);
+        btnChat = findViewById(R.id.button_chatbox_send);
 
         btnChat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -121,7 +121,7 @@ public class ChatActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
                             edtChat.setText("");
-                            mMessageRecycler.scrollToPosition((int)mMessageAdapter.getItemCount() - 1);
+                            mMessageRecycler.scrollToPosition(mMessageAdapter.getItemCount() - 1);
                             autoScroll = true;
 
                             UserOnline userOnline = new UserOnline();
@@ -136,7 +136,7 @@ public class ChatActivity extends AppCompatActivity {
             }
         });
 
-        btnBack = (AppCompatImageButton) findViewById(R.id.btnBack);
+        btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -165,7 +165,7 @@ public class ChatActivity extends AppCompatActivity {
                     mMessageAdapter.addItem(chatShow);
                 }
                 if(autoScroll){
-                    mMessageRecycler.scrollToPosition((int)mMessageAdapter.getItemCount() - 1);
+                    mMessageRecycler.scrollToPosition(mMessageAdapter.getItemCount() - 1);
                 }
             }
 

@@ -51,11 +51,11 @@ public class DiemThonghopRecyclerViewAdapter extends RecyclerView.Adapter<Recycl
         public TextView monHoc, sTT, maMonHoc, soTC, dTB;
         public DiemTonghopViewHolder(View itemView) {
             super(itemView);
-            monHoc = (TextView) itemView.findViewById(R.id.monhoc_text);
-            sTT = (TextView) itemView.findViewById(R.id.stt_text);
-            maMonHoc = (TextView) itemView.findViewById(R.id.mamon_text);
-            soTC = (TextView) itemView.findViewById(R.id.tc_text);
-            dTB = (TextView) itemView.findViewById(R.id.dtb_text);
+            monHoc = itemView.findViewById(R.id.monhoc_text);
+            sTT = itemView.findViewById(R.id.stt_text);
+            maMonHoc = itemView.findViewById(R.id.mamon_text);
+            soTC = itemView.findViewById(R.id.tc_text);
+            dTB = itemView.findViewById(R.id.dtb_text);
         }
     }
 }

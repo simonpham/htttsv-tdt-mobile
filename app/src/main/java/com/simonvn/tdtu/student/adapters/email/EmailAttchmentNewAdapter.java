@@ -78,9 +78,9 @@ public class EmailAttchmentNewAdapter extends RecyclerView.Adapter {
 
         public EmailAttachmentViewHolder(View itemView) {
             super(itemView);
-            tvName = (TextView) itemView.findViewById(R.id.tvName);
-            tvSize = (TextView) itemView.findViewById(R.id.tvSize);
-            btnRemove = (AppCompatImageButton) itemView.findViewById(R.id.btnRemove);
+            tvName = itemView.findViewById(R.id.tvName);
+            tvSize = itemView.findViewById(R.id.tvSize);
+            btnRemove = itemView.findViewById(R.id.btnRemove);
         }
     }
 }

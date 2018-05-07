@@ -88,8 +88,8 @@ public class MaterialSquareLoading extends RelativeLayout {
     private void inflateSelf() {
         inflate(getContext(), R.layout.material_square_loading_layout, this);
 
-        outerSquare = (CardView) findViewById(R.id.material_square1);
-        innerSquare = (CardView) findViewById(R.id.material_square2);
+        outerSquare = findViewById(R.id.material_square1);
+        innerSquare = findViewById(R.id.material_square2);
     }
 
     @Override protected void onSizeChanged(int w, int h, int oldw, int oldh) {

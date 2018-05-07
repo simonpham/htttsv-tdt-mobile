@@ -13,6 +13,6 @@ public class HocphiTitleViewHolder extends RecyclerView.ViewHolder  {
     public TextView title;
     public HocphiTitleViewHolder(View itemView) {
         super(itemView);
-        title = (TextView) itemView.findViewById(R.id.title_text);
+        title = itemView.findViewById(R.id.title_text);
     }
 }

@@ -82,8 +82,8 @@ public class ThongtinRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVi
         public TextView title, content;
         public ThongtinViewHolder(View itemView) {
             super(itemView);
-            title = (TextView) itemView.findViewById(R.id.title_text);
-            content = (TextView) itemView.findViewById(R.id.content_text);
+            title = itemView.findViewById(R.id.title_text);
+            content = itemView.findViewById(R.id.content_text);
         }
     }
 
@@ -91,7 +91,7 @@ public class ThongtinRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerVi
         public TextView title;
         public ThongtinTitleViewHolder(View itemView) {
             super(itemView);
-            title = (TextView) itemView.findViewById(R.id.title_text);
+            title = itemView.findViewById(R.id.title_text);
         }
     }
 }

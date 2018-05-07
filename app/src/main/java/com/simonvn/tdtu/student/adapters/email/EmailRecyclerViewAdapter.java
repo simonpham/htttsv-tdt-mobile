@@ -78,12 +78,12 @@ public class EmailRecyclerViewAdapter extends RecyclerView.Adapter<EmailRecycler
         public RelativeTimeTextView tvDate;
         public EmailViewHolder(View itemView) {
             super(itemView);
-            from = (TextView) itemView.findViewById(R.id.from_text);
-            personal = (TextView) itemView.findViewById(R.id.personal_text);
-            subject = (TextView) itemView.findViewById(R.id.subject_text);
-            tvDate = (RelativeTimeTextView) itemView.findViewById(R.id.tvDate);
-            imgAttachment = (ImageView) itemView.findViewById(R.id.imgAttachment);
-            layout = (MaterialRippleLayout) itemView.findViewById(R.id.layout);
+            from = itemView.findViewById(R.id.from_text);
+            personal = itemView.findViewById(R.id.personal_text);
+            subject = itemView.findViewById(R.id.subject_text);
+            tvDate = itemView.findViewById(R.id.tvDate);
+            imgAttachment = itemView.findViewById(R.id.imgAttachment);
+            layout = itemView.findViewById(R.id.layout);
             layout.setOnLongClickListener(this);
             layout.setOnClickListener(this);
         }

@@ -62,7 +62,7 @@ public class SakaiActivity extends AppCompatActivity {
     private void anhXa(){
         khoiTao();
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
+        recyclerView = findViewById(R.id.recyclerview);
         adapter = new SakaiAnnouncementAdapter();
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
@@ -77,7 +77,7 @@ public class SakaiActivity extends AppCompatActivity {
         };
 
 
-        swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipeContainer);
+        swipeContainer = findViewById(R.id.swipeContainer);
         swipeContainer.setColorSchemeResources(R.color.colorAccent);
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -86,7 +86,7 @@ public class SakaiActivity extends AppCompatActivity {
             }
         });
 
-        btnBack = (AppCompatImageButton) findViewById(R.id.btnBack);
+        btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,7 +94,7 @@ public class SakaiActivity extends AppCompatActivity {
             }
         });
 
-        btnSetPass = (AppCompatImageButton) findViewById(R.id.btnSetPass);
+        btnSetPass = findViewById(R.id.btnSetPass);
         btnSetPass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

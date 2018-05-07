@@ -105,11 +105,11 @@ public class EmailViewActivity extends AppCompatActivity {
     }
     private void anhXa(){
         khoiTao();
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
 
-        webView = (WebView) findViewById(R.id.webview);
+        webView = findViewById(R.id.webview);
         webView.getSettings().setAppCacheMaxSize( 5 * 1024 * 1024 );
         webView.getSettings().setAppCachePath( getApplicationContext().getCacheDir().getAbsolutePath());
         webView.getSettings().setAllowFileAccess( true );
@@ -119,12 +119,12 @@ public class EmailViewActivity extends AppCompatActivity {
         webView.getSettings().setBuiltInZoomControls(true);
         webView.getSettings().setDisplayZoomControls(false);
 
-        from = (TextView) findViewById(R.id.from_text);
-        personal = (TextView) findViewById(R.id.personal_text);
-        subject = (TextView) findViewById(R.id.subject_text);
-        tvDate = (RelativeTimeTextView) findViewById(R.id.tvDate);
+        from = findViewById(R.id.from_text);
+        personal = findViewById(R.id.personal_text);
+        subject = findViewById(R.id.subject_text);
+        tvDate = findViewById(R.id.tvDate);
 
-        btnBack = (AppCompatImageButton) findViewById(R.id.btnBack);
+        btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -132,7 +132,7 @@ public class EmailViewActivity extends AppCompatActivity {
             }
         });
 
-        btnReply = (AppCompatImageButton) findViewById(R.id.btnReply);
+        btnReply = findViewById(R.id.btnReply);
         btnReply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -150,7 +150,7 @@ public class EmailViewActivity extends AppCompatActivity {
         });
 
 
-        attRv = (RecyclerView) findViewById(R.id.rvAttachment);
+        attRv = findViewById(R.id.rvAttachment);
         attAdapter = new EmailAttachmentAdapter();
         attRv.setLayoutManager(new LinearLayoutManager(this));
         attRv.setAdapter(attAdapter);

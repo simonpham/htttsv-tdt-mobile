@@ -83,7 +83,7 @@ public class SakaiViewActivity extends AppCompatActivity {
     private void anhXa(){
         khoiTao();
 
-        attRv = (RecyclerView) findViewById(R.id.recyclerview);
+        attRv = findViewById(R.id.recyclerview);
         attAdapter = new SakaiAttachmentAdapter();
         attRv.setLayoutManager(new LinearLayoutManager(this));
         attRv.setAdapter(attAdapter);
@@ -106,10 +106,10 @@ public class SakaiViewActivity extends AppCompatActivity {
             }
         };
 
-        tvTile = (TextView) findViewById(R.id.tvTile);
-        tvCreatedByDisplayName = (TextView) findViewById(R.id.tvCreatedByDisplayName);
-        tvCreatedOn = (RelativeTimeTextView) findViewById(R.id.tvCreatedOn);
-        webView = (WebView) findViewById(R.id.webview);
+        tvTile = findViewById(R.id.tvTile);
+        tvCreatedByDisplayName = findViewById(R.id.tvCreatedByDisplayName);
+        tvCreatedOn = findViewById(R.id.tvCreatedOn);
+        webView = findViewById(R.id.webview);
 
         tvTile.setText(sakaiAnnouncement.getTitle());
         tvCreatedByDisplayName.setText(sakaiAnnouncement.getCreatedByDisplayName());
@@ -118,7 +118,7 @@ public class SakaiViewActivity extends AppCompatActivity {
         webView.loadData(sakaiAnnouncement.getBody(), "text/html; charset=utf-8","UTF-8");
         webView.setBackgroundColor(Color.TRANSPARENT);
 
-        btnBack = (AppCompatImageButton) findViewById(R.id.btnBack);
+        btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

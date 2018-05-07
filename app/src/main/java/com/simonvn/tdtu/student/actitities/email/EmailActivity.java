@@ -107,7 +107,7 @@ public class EmailActivity extends AppCompatActivity {
     }
     private void anhXa(){
         khoiTao();
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
+        recyclerView = findViewById(R.id.recyclerview);
         adapter = new EmailRecyclerViewAdapter(getApplicationContext(), lists);
         manager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         manager.setSpanCount(1);
@@ -121,11 +121,11 @@ public class EmailActivity extends AppCompatActivity {
         endless.setAdapter(adapter);
 
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
 
-        swipeContainer = (SwipeRefreshLayout) findViewById(R.id.swipeContainer);
+        swipeContainer = findViewById(R.id.swipeContainer);
         swipeContainer.setColorSchemeResources(R.color.colorAccent);
 
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -137,21 +137,21 @@ public class EmailActivity extends AppCompatActivity {
             }
         });
 
-        btnBack = (AppCompatImageButton) findViewById(R.id.btnBack);
+        btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
         });
-        btnWeb = (AppCompatImageButton) findViewById(R.id.btnWeb);
+        btnWeb = findViewById(R.id.btnWeb);
         btnWeb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 getEmailWeb();
             }
         });
-        btnNoti = (AppCompatImageButton) findViewById(R.id.btnNoti);
+        btnNoti = findViewById(R.id.btnNoti);
 
         btnNoti.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -177,7 +177,7 @@ public class EmailActivity extends AppCompatActivity {
             }
         });
 
-        fabNewMail = (FloatingActionButton) findViewById(R.id.fabNewMail);
+        fabNewMail = findViewById(R.id.fabNewMail);
         fabNewMail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -186,7 +186,7 @@ public class EmailActivity extends AppCompatActivity {
             }
         });
 
-        tvLoadMore = (TextView) findViewById(R.id.tvLoadMore);
+        tvLoadMore = findViewById(R.id.tvLoadMore);
         tvLoadMore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -197,7 +197,7 @@ public class EmailActivity extends AppCompatActivity {
             }
         });
 
-        layoutLoadmore = (LinearLayout) findViewById(R.id.layoutLoadmore);
+        layoutLoadmore = findViewById(R.id.layoutLoadmore);
         layoutLoadmore.setVisibility(View.GONE);
     }
 

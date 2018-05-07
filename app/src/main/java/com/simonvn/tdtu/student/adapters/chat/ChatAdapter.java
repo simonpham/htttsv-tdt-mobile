@@ -145,10 +145,10 @@ public class ChatAdapter extends RecyclerView.Adapter {
         public View dotOnline;
         public ChatViewHolder(View itemView) {
             super(itemView);
-            imgAvatar = (CircleImageView) itemView.findViewById(R.id.imgAvatar);
-            tvName = (TextView) itemView.findViewById(R.id.tvName);
-            tvBody = (TextView) itemView.findViewById(R.id.tvBody);
-            dotOnline = (View) itemView.findViewById(R.id.dotOnline);
+            imgAvatar = itemView.findViewById(R.id.imgAvatar);
+            tvName = itemView.findViewById(R.id.tvName);
+            tvBody = itemView.findViewById(R.id.tvBody);
+            dotOnline = itemView.findViewById(R.id.dotOnline);
         }
     }
 
@@ -156,7 +156,7 @@ public class ChatAdapter extends RecyclerView.Adapter {
         public RelativeTimeTextView tvDate;
         public ChatDateViewHolder(View itemView) {
             super(itemView);
-            tvDate = (RelativeTimeTextView) itemView.findViewById(R.id.tvDate);
+            tvDate = itemView.findViewById(R.id.tvDate);
         }
     }
 }

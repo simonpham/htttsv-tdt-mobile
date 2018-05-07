@@ -4,7 +4,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
 
 def buildTimestamp() {
-    return (System.currentTimeMillis()/1000).toInteger();
+    return (System.currentTimeMillis()/1000).toInteger()
 }
 
 def buildTime() {

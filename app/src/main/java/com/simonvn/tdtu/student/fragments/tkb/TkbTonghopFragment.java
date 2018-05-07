@@ -59,7 +59,7 @@ public class TkbTonghopFragment extends Fragment {
     }
     private void anhXa(){
         khoiTao();
-        recyclerView = (RecyclerView) inflatedView.findViewById(R.id.recyclerview);
+        recyclerView = inflatedView.findViewById(R.id.recyclerview);
         adapter = new TkbTonghopRecyclerViewAdapter(list);
         manager = new TopSnappedStickyLayoutManager(inflatedView.getContext(), adapter);
         manager.elevateHeaders(1);
@@ -68,7 +68,7 @@ public class TkbTonghopFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(adapter);
 
-        swipeContainer = (SwipeRefreshLayout) inflatedView.findViewById(R.id.swipeContainer);
+        swipeContainer = inflatedView.findViewById(R.id.swipeContainer);
         swipeContainer.setColorSchemeResources(R.color.colorAccent);
 
         swipeContainer.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {

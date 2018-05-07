@@ -67,13 +67,13 @@ public class CnsvResultAdapter extends RecyclerView.Adapter{
 
         public CnsvResultViewHolder(View itemView) {
             super(itemView);
-            tvType = (TextView) itemView.findViewById(R.id.tvType);
-            tvHk = (TextView) itemView.findViewById(R.id.tvHk);
-            tvDateRequest = (TextView) itemView.findViewById(R.id.tvDateRequest);
-            tvDateResponse = (TextView) itemView.findViewById(R.id.tvDateResponse);
-            tvStatus = (TextView) itemView.findViewById(R.id.tvStatus);
-            tvNote = (TextView) itemView.findViewById(R.id.tvNote);
-            tvId = (TextView) itemView.findViewById(R.id.tvId);
+            tvType = itemView.findViewById(R.id.tvType);
+            tvHk = itemView.findViewById(R.id.tvHk);
+            tvDateRequest = itemView.findViewById(R.id.tvDateRequest);
+            tvDateResponse = itemView.findViewById(R.id.tvDateResponse);
+            tvStatus = itemView.findViewById(R.id.tvStatus);
+            tvNote = itemView.findViewById(R.id.tvNote);
+            tvId = itemView.findViewById(R.id.tvId);
         }
     }
 }
